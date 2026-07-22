@@ -1,0 +1,24 @@
+/* 一级目录：作为醒目的可折叠大标题 */
+.md-sidebar--primary
+.md-nav--primary
+> .md-nav__list
+> .md-nav__item--nested
+> .md-nav__link {
+  margin-top: 0.35rem;
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* 下拉菜单略微缩进 */
+.md-sidebar--primary
+.md-nav--primary
+> .md-nav__list
+> .md-nav__item--nested
+> .md-nav
+> .md-nav__list {
+  padding-left: 0.35rem;
+}

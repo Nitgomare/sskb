@@ -1,0 +1,305 @@
+# ============================================================
+# 网站基本信息
+# ============================================================
+
+site_name: "科研技能"
+site_description: "面向研究生的科研工具与实践教程"
+site_author: "课题组"
+
+# 生成网页时使用的文档目录
+docs_dir: docs
+
+# 生成后的静态网站目录
+site_dir: site
+
+# 是否使用简洁网址
+# 例如：01-literature/01-search-tools/
+# 而不是：01-literature/01-search-tools.html
+use_directory_urls: true
+
+
+# ============================================================
+# Material主题配置
+# ============================================================
+
+theme:
+  name: material
+
+  # 中文界面
+  language: zh
+
+  # 网站左上角图标
+  icon:
+    logo: material/school
+
+  # 浅色和深色模式
+  palette:
+
+    # 浅色模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: green
+
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+
+    # 深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: green
+
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+
+  # 页面功能
+  features:
+
+    # 左侧目录按章节分组显示
+    - navigation.sections
+
+    # 默认展开左侧目录
+    - navigation.expand
+
+    # 页面顶部显示当前位置路径
+    - navigation.path
+
+    # 页面滚动时显示返回顶部按钮
+    - navigation.top
+
+    # 页面底部显示上一页和下一页
+    - navigation.footer
+
+    # 页面切换时不完全刷新网页
+    - navigation.instant
+
+    # 右侧页内目录跟随滚动
+    - toc.follow
+
+    # 代码块显示复制按钮
+    - content.code.copy
+
+    # 代码注释功能
+    - content.code.annotate
+
+    # 标签页内容可以相互关联
+    - content.tabs.link
+
+
+# ============================================================
+# 插件配置
+# ============================================================
+
+plugins:
+
+  # 全文搜索
+  - search:
+      lang:
+        - zh
+        - en
+
+      # 搜索结果分词符号
+      separator: '[\s\-\.]+'
+
+
+# ============================================================
+# Markdown扩展
+# ============================================================
+
+markdown_extensions:
+
+  # 提示框
+  - admonition
+
+  # 表格
+  - tables
+
+  # 为Markdown元素添加CSS属性
+  - attr_list
+
+  # 在HTML标签内部继续解析Markdown
+  - md_in_html
+
+  # 脚注
+  - footnotes
+
+  # 定义列表
+  - def_list
+
+  # 标题自动编号和锚点
+  - toc:
+      permalink: true
+      permalink_title: "复制本节链接"
+      toc_depth: 2-4
+
+  # 可折叠提示框
+  - pymdownx.details
+
+  # 增强代码块
+  - pymdownx.superfences
+
+  # 代码语法高亮
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+
+  # 行内代码高亮
+  - pymdownx.inlinehilite
+
+  # 键盘按键显示
+  - pymdownx.keys
+
+  # 删除线
+  - pymdownx.tilde
+
+  # 上标
+  - pymdownx.caret
+
+  # 下标
+  - pymdownx.mark
+
+  # 标签页
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  # Material图标和Emoji
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - assets/javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+
+# ============================================================
+# 左侧课程目录
+# ============================================================
+
+nav:
+
+  - "课程首页": index.md
+  - "公式测试": formula.md
+
+  - "1. 文献检索与管理":
+
+      - "本章介绍":
+          01-literature/index.md
+
+      - "1.1 文献检索工具":
+          01-literature/01-search-tools.md
+
+      - "1.2 文献筛选方法":
+          01-literature/02-literature-screening.md
+
+      - "1.3 Zotero文献管理":
+          01-literature/03-zotero.md
+
+
+  - "2. 文献阅读与综述整理":
+
+      - "本章介绍":
+          02-reading/index.md
+
+      - "2.1 论文快速阅读":
+          02-reading/01-paper-reading.md
+
+      - "2.2 翻译与专业术语整理":
+          02-reading/02-translation.md
+
+      - "2.3 PDF转Markdown和HTML":
+          02-reading/03-pdf-to-markdown.md
+
+      - "2.4 HTML格式综述制作":
+          02-reading/04-html-review.md
+
+
+  - "3. 科研图表与流程图":
+
+      - "本章介绍":
+          03-figure/index.md
+
+      - "3.1 流程图和技术路线图":
+          03-figure/01-flowchart.md
+
+      - "3.2 Python科研绘图":
+          03-figure/02-python-figure.md
+
+      - "3.3 MATLAB科研绘图":
+          03-figure/03-matlab-figure.md
+
+      - "3.4 科研图片排版":
+          03-figure/04-figure-layout.md
+
+
+  - "4. 论文总结与成果展示":
+
+      - "本章介绍":
+          04-presentation/index.md
+
+      - "4.1 大模型辅助论文总结":
+          04-presentation/01-paper-summary.md
+
+      - "4.2 学术PPT制作":
+          04-presentation/02-ppt.md
+
+      - "4.3 视频剪辑和配音":
+          04-presentation/03-video.md
+
+
+  - "5. 编程与专业知识学习":
+
+      - "本章介绍":
+          05-professional/index.md
+
+      - "5.1 风电基础":
+          05-professional/01-wind-power.md
+
+      - "5.2 机器人基础":
+          05-professional/02-robotics.md
+
+      - "5.3 Python和MATLAB":
+          05-professional/03-programming.md
+
+      - "5.4 深度学习":
+          05-professional/04-deep-learning.md
+
+      - "5.5 大模型科研应用":
+          05-professional/05-large-language-model.md
+
+
+  - "6. 综合实践":
+
+      - "本章介绍":
+          06-practice/index.md
+
+      - "6.1 建立个人文献库":
+          06-practice/01-zotero-library.md
+
+      - "6.2 完成论文阅读卡片":
+          06-practice/02-paper-card.md
+
+      - "6.3 绘制技术路线图":
+          06-practice/03-flowchart.md
+
+      - "6.4 完成科研汇报PPT":
+          06-practice/04-presentation.md
+          
+
+  - "library": library/index.md
+
+          
+
+
+# ============================================================
+# 网站底部信息
+# ============================================================
+
+copyright: "Copyright &copy; 2026 科研新手实用培训"

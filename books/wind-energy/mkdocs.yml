@@ -1,0 +1,70 @@
+site_name: 风能技术
+
+docs_dir: docs
+
+# 相对于 books/wind-energy/mkdocs.yml
+site_dir: ../../site/books/wind-energy
+
+theme:
+  name: material
+  language: zh
+
+  icon:
+    logo: material/wind-turbine
+
+  features:
+    #- navigation.sections
+   # - navigation.expand
+  #  - toc.integrate
+#    - navigation.footer
+#    - content.code.copy
+  
+    - navigation.sections
+    #- navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - navigation.path
+    - content.code.copy
+   
+nav:
+  - 图书首页: index.md
+
+  - 第1章 Introduction: chapters/01-introduction/index.md
+
+  - 第2章 The wind resource: chapters/02-the-wind-resource/index.md
+
+  - 第3章 Aerodynamics: chapters/03-aerodynamics-of-horizontal-axis-wind-turbines/index.md
+
+  - 第4章 Further aerodynamic topics: chapters/04-further-aerodynamic-topics-for-wind-turbines/index.md
+
+  - 第5章 Design loads: chapters/05-design-loads-for-horizontal-axis-wind-turbines/index.md
+
+  - 第6章 Conceptual design: chapters/06-conceptual-design-of-horizontal-axis-wind-turbines/index.md
+
+  - 第7章 Component design: chapters/07-component-design/index.md
+
+  - 第8章 The controller: chapters/08-the-controller/index.md
+
+  - 第9章 Installations and wind farms: chapters/09-wind-turbine-installations-and-wind-farms/index.md
+
+  - 第10章 Electric power system: chapters/10-wind-energy-and-the-electric-power-system/index.md
+
+  - 第11章 Offshore wind: chapters/11-offshore-wind-turbines-and-wind-farms/index.md
+
+markdown_extensions:
+  - tables
+  - attr_list
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: true
+      toc_depth: "2-3"
+
+extra_javascript:
+  - assets/javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  # 发布到域名根目录时使用
+  homepage: /
