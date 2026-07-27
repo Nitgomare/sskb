@@ -1,6 +1,6 @@
 # Library
 
-课程配套的专业资料库。本站目前收录以下可在线阅读的书籍。
+课程配套的专业资料库。本站目前收录以下可在线阅读的书籍与论文。
 
 <div class="grid cards" markdown>
 
@@ -10,6 +10,22 @@
 
     涵盖风资源、空气动力学、设计载荷、部件设计、控制、风电场与海上风电。
 
-    [开始阅读 :material-arrow-right:](../风能技术/){ .md-button .md-button--primary }
+    [进入独立图书站 :material-arrow-right:](../book-sites/wind-energy/){ .md-button .md-button--primary target=_top }
+
+-   :material-book-open-page-variant:{ .lg .middle } **风能技术（第二版）**
+
+    ---
+
+    中文版《风能技术》第二版，涵盖风能基础、风力机设计、控制与风电场。
+
+    [进入独立图书站 :material-arrow-right:](../book-sites/风能技术/){ .md-button .md-button--primary target=_top }
+
+-   :material-brain:{ .lg .middle } **Utilizing Large-Scale Foundation Models for PHM**
+
+    ---
+
+    探讨大规模基础模型在风电机组预测与健康管理（PHM）中的应用、挑战与未来方向。
+
+    [进入独立图书站 :material-arrow-right:](../book-sites/Utilizing-large-scale-foundation-models-for/){ .md-button .md-button--primary target=_top }
 
 </div>

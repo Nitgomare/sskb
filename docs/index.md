@@ -6,7 +6,7 @@
 
 ## :material-library-shelves: Library
 
-**从这里开始浏览课程配套书籍与专业资料。** 当前收录《Wind Energy Handbook》第二版，可按章节阅读。
+**从这里开始浏览课程配套书籍与专业资料。** 当前收录三项资料，每项均可进入独立图书站按章节阅读。
 
 [进入 Library :material-arrow-right:](library/){ .md-button .md-button--primary }
 
