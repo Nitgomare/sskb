@@ -1,16 +1,18 @@
 # 科研新手实用培训
 
-本教程面向刚进入课题组的研究生，重点介绍科研过程中真正需要使用的工具和操作方法。
+面向刚进入课题组的研究生，提供两项马上能用的科研技能课程，以及持续整理的专业书库。
 
-每个模块均包含：
+<div class="library-hero" markdown>
 
-- 具体工具；
-- 实际操作步骤；
-- 可复现案例；
-- 实践任务；
-- 最终提交成果。
+## :material-library-shelves: Library
 
-## 课程模块
+**从这里开始浏览课程配套书籍与专业资料。** 当前收录《Wind Energy Handbook》第二版，可按章节阅读。
+
+[进入 Library :material-arrow-right:](library/){ .md-button .md-button--primary }
+
+</div>
+
+## 课程
 
 <div class="grid cards" markdown>
 
@@ -18,48 +20,16 @@
 
     ---
 
-    学习文献检索、筛选以及 Zotero 文献管理。
+    学习文献检索、筛选与 Zotero 文献管理。
 
     [:octicons-arrow-right-24: 开始学习](01-literature/01-search-tools.md)
 
--   :material-file-document-edit:{ .lg .middle } **文献阅读与综述**
+-   :material-file-document-edit:{ .lg .middle } **文献格式转换与翻译**
 
     ---
 
-    完成论文阅读、翻译、PDF转换和综述整理。
+    学习 PDF 转 Markdown、HTML，以及翻译与专业术语整理。
 
-    [:octicons-arrow-right-24: 开始学习](02-reading/index.md)
-
--   :material-chart-line:{ .lg .middle } **科研图表制作**
-
-    ---
-
-    使用 draw.io、Python 和 MATLAB 制作科研图表。
-
-    [:octicons-arrow-right-24: 开始学习](03-figure/index.md)
-
--   :material-presentation:{ .lg .middle } **论文总结与成果展示**
-
-    ---
-
-    完成论文总结、学术PPT和汇报视频制作。
-
-    [:octicons-arrow-right-24: 开始学习](04-presentation/index.md)
-
--   :material-code-braces:{ .lg .middle } **编程与专业学习**
-
-    ---
-
-    学习 Python、MATLAB、深度学习和专业基础知识。
-
-    [:octicons-arrow-right-24: 开始学习](05-professional/index.md)
-
--   :material-clipboard-check-outline:{ .lg .middle } **综合实践**
-
-    ---
-
-    完成文献库、阅读卡片、技术路线图和汇报PPT。
-
-    [:octicons-arrow-right-24: 开始学习](06-practice/index.md)
+    [:octicons-arrow-right-24: 开始学习](02-format-trans/01-pdf-to-markdown.md)
 
 </div>

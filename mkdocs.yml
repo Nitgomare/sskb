@@ -177,6 +177,7 @@ markdown_extensions:
 # 左侧一级目录大标题样式
 extra_css:
   - assets/stylesheets/navigation.css
+  - assets/stylesheets/homepage.css
 
 extra_javascript:
   - assets/javascripts/mathjax.js
@@ -288,7 +289,7 @@ nav:
 #           06-practice/04-presentation.md
           
 
-  - "library": library/index.md
+  - "📚 Library": library/index.md
 
           
 

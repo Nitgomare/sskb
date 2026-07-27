@@ -1,0 +1,21 @@
+/* 首页 Library 主入口 */
+.library-hero {
+  margin: 1.5rem 0 2.5rem;
+  padding: 1.8rem 2rem 2rem;
+  border: 1px solid var(--md-primary-fg-color--light);
+  border-radius: 0.35rem;
+  background: linear-gradient(
+    120deg,
+    var(--md-primary-fg-color--transparent),
+    var(--md-primary-fg-color--lightest)
+  );
+}
+
+.library-hero h2 {
+  margin-top: 0;
+  color: var(--md-primary-fg-color);
+}
+
+.library-hero .md-button {
+  margin-top: 0.4rem;
+}
