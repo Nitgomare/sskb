@@ -1,4 +1,4 @@
-# 3.7 用 Cloudflare Pages 部署
+# 7. 用 Cloudflare Pages 部署
 
 Cloudflare Pages 会克隆 GitHub 仓库、安装 `requirements.txt` 中的 Python 包、运行 MkDocs，再把 `site/` 发布到全球网络。以后每次推送到生产分支都会自动重复这套流程。
 

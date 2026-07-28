@@ -1,8 +1,8 @@
-# 3.2 建立目录并使用共享 YML
+# 2. 建立目录并使用共享 YML
 
 ## 推荐目录
 
-先建立下面的最小结构。文件夹和文件名建议使用小写英文、数字和连字符，页面显示的中文标题写在 `mkdocs.yml` 中。
+本站精简后的目录如下。文件夹和文件名建议使用小写英文、数字和连字符，页面显示的中文标题写在 `mkdocs.yml` 中。
 
 ```text
 research-site/
@@ -14,10 +14,9 @@ research-site/
 ├─ docs/
 │  ├─ index.md
 │  ├─ 01-literature/
-│  │  ├─ index.md
-│  │  └─ search.md
+│  ├─ 02-format-trans/
+│  ├─ 03-site-building/
 │  ├─ assets/
-│  │  ├─ images/
 │  │  ├─ stylesheets/
 │  │  │  ├─ navigation.css
 │  │  │  └─ homepage.css
@@ -26,7 +25,9 @@ research-site/
 │  └─ library/
 │     └─ index.md
 ├─ books/
-│  └─ demo-book/         # 每本书是一个独立 MkDocs 源项目
+│  ├─ Utilizing-large-scale-foundation-models-for/
+│  ├─ wind-energy/
+│  └─ 风能技术/            # 每本书都是一个独立 MkDocs 源项目
 └─ site/                 # 自动生成，不提交
    └─ book-sites/        # build_all.py 自动生成
 ```
@@ -91,7 +92,6 @@ site/
 .venv/
 __pycache__/
 *.pyc
-docs/book-sites/
 .DS_Store
 ```
 

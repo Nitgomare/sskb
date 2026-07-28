@@ -1,4 +1,4 @@
-# 3.8 更新、排错与检查清单
+# 8. 更新、排错与检查清单
 
 ## 一次标准更新
 
@@ -45,14 +45,20 @@ git push
 nav:
   - "从零制作与部署本站":
       - "教程总览": 03-site-building/index.md
-      - "3.1 准备环境": 03-site-building/01-environment.md
+      - "1. 准备环境": 03-site-building/01-environment.md
 ```
 
 如果写成两个同级页面，它们就不会组成下拉菜单。还要确认 `theme.features` 中没有 `navigation.expand`；它会让菜单默认全部展开，而不是按需下拉。
 
 ## 独立图书站更新
 
-修改图书源文件后按顺序执行：
+如果修改的是 `books/<书名>/docs/` 中已经拆好的章节，直接重新构建：
+
+```powershell
+python build_all.py
+```
+
+只有从一份新的超长 Markdown 重新生成图书项目时，才先运行拆分脚本：
 
 ```powershell
 python split_book_to_mkdocs_stable_version.py
@@ -76,7 +82,7 @@ python build_all.py
 - [ ] 文件名大小写与链接完全一致；
 - [ ] 桌面和手机、浅色和深色均已检查；
 - [ ] 没有密码、令牌、隐私数据或未授权内容；
-- [ ] 没有把 `.venv/`、`site/` 和生成的 `docs/book-sites/` 提交；
+- [ ] 没有把 `.venv/` 和 `site/` 提交；
 - [ ] 单文件不超过 25 MiB，站点文件数未超 Pages 限制；
 - [ ] GitHub 最新提交与 Cloudflare 生产部署显示同一个提交；
 - [ ] 自定义域名和 `pages.dev` 均可访问。

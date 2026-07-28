@@ -2,4 +2,4 @@ site/
 .venv/
 __pycache__/
 *.pyc
-docs/book-sites/
+.DS_Store

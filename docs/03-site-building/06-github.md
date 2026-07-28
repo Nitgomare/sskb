@@ -1,4 +1,4 @@
-# 3.6 上传到 GitHub
+# 6. 上传到 GitHub
 
 GitHub 保存的是网站源文件。Cloudflare Pages 连接仓库后，每次收到新的提交都会自动构建并部署。
 
@@ -7,18 +7,17 @@ GitHub 保存的是网站源文件。Cloudflare Pages 连接仓库后，每次�
 在项目根目录运行：
 
 ```powershell
-python -m mkdocs build
+python build_all.py
 python -m mkdocs serve
 ```
 
-普通页面可用 `mkdocs serve` 预览；包含独立图书的完整成品先运行 `python build_all.py`，再检查 `site/`。确认 `.gitignore` 已排除：
+`build_all.py` 检查主站和全部独立图书能否构建；`mkdocs serve` 用于边编辑边预览主站页面。确认 `.gitignore` 已排除：
 
 ```gitignore
 site/
 .venv/
 __pycache__/
 *.pyc
-docs/book-sites/
 ```
 
 !!! danger "绝不要提交密钥"
