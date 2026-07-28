@@ -51,3 +51,5 @@ extra_javascript:
 
 extra:
   homepage: "/"
+
+copyright: 'Made by <a href="https://github.com/Nitgomare" target="_blank" rel="noopener">Mike Zheng</a>'

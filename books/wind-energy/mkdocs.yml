@@ -68,3 +68,5 @@ extra_javascript:
 extra:
   # 发布到域名根目录时使用
   homepage: /
+
+copyright: 'Made by <a href="https://github.com/Nitgomare" target="_blank" rel="noopener">Mike Zheng</a>'
