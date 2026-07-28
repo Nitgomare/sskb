@@ -43,7 +43,7 @@ git push
 
 ```yaml
 nav:
-  - "3. 从零制作与部署本站":
+  - "从零制作与部署本站":
       - "教程总览": 03-site-building/index.md
       - "3.1 准备环境": 03-site-building/01-environment.md
 ```
