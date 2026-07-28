@@ -8,7 +8,7 @@
 
 **从这里开始浏览课程配套书籍与专业资料。** 当前收录三项资料，每项均可进入独立图书站按章节阅读。
 
-[进入 Library :material-arrow-right:](library/){ .md-button .md-button--primary }
+[进入 Library :material-arrow-right:](library/index.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -31,5 +31,13 @@
     学习 PDF 转 Markdown、HTML，以及翻译与专业术语整理。
 
     [:octicons-arrow-right-24: 开始学习](02-format-trans/01-pdf-to-markdown.md)
+
+-   :material-web:{ .lg .middle } **从零制作与部署本站**
+
+    ---
+
+    从目录、共享 YML、样式和大书拆分开始，完整走通 GitHub 与 Cloudflare Pages 部署。
+
+    [:octicons-arrow-right-24: 查看建站教程](03-site-building/index.md)
 
 </div>

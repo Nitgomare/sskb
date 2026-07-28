@@ -191,7 +191,6 @@ extra_javascript:
 nav:
 
   - "课程首页": index.md
-  - "公式测试": formula.md
 
   - "1. 文献检索与管理":
 
@@ -287,6 +286,36 @@ nav:
 
 #       - "6.4 完成科研汇报PPT":
 #           06-practice/04-presentation.md
+
+
+  - "3. 从零制作与部署本站":
+
+      - "教程总览":
+          03-site-building/index.md
+
+      - "3.1 准备环境与工具":
+          03-site-building/01-environment.md
+
+      - "3.2 建立目录并使用共享 YML":
+          03-site-building/02-structure-and-yml.md
+
+      - "3.3 编写页面与设置导航":
+          03-site-building/03-writing-and-nav.md
+
+      - "3.4 调整主题与自定义样式":
+          03-site-building/04-styling.md
+
+      - "3.5 拆分书本等大型文件":
+          03-site-building/05-split-large-books.md
+
+      - "3.6 上传到 GitHub":
+          03-site-building/06-github.md
+
+      - "3.7 用 Cloudflare Pages 部署":
+          03-site-building/07-cloudflare-pages.md
+
+      - "3.8 更新、排错与检查清单":
+          03-site-building/08-maintenance.md
           
 
   - "📚 Library": library/index.md
