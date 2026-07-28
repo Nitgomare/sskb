@@ -47,7 +47,7 @@ research-site/
 
 **不需要从头手写。** 下载后把文件放到项目根目录并命名为 `mkdocs.yml`：
 
-[下载可直接修改的 mkdocs.yml](downloads/mkdocs.yml){ .md-button .md-button--primary download }
+[下载可直接修改的 mkdocs.yml](downloads/mkdocs.yml){ .md-button .md-button--primary download="mkdocs.yml" }
 
 </div>
 
