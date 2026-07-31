@@ -1,7 +1,7 @@
 site_name: "Utilizing large scale foundation models for PHM"
 
 docs_dir: docs
-site_dir: "../../site/books/Utilizing-large-scale-foundation-models-for"
+site_dir: "../../site/book-sites/Utilizing-large-scale-foundation-models-for"
 
 theme:
   name: material
@@ -19,6 +19,7 @@ theme:
 
 nav:
   - 图书首页: index.md
+  - 前置内容: 00-front-matter/index.md
   - "H I G H L I G H T S": chapters/01-h-i-g-h-l-i-g-h-t-s/index.md
   - "A R T I C L E I N F O": chapters/02-a-r-t-i-c-l-e-i-n-f-o/index.md
   - "A B S T R A C T": chapters/03-a-b-s-t-r-a-c-t/index.md

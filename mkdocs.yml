@@ -2,9 +2,9 @@
 # 网站基本信息
 # ============================================================
 
-site_name: "科研技能"
+site_name: "科研知识库"
 site_description: "面向研究生的科研工具与实践教程"
-site_author: "课题组"
+site_author: "Mike Zheng"
 
 # 生成网页时使用的文档目录
 docs_dir: docs
@@ -178,9 +178,11 @@ markdown_extensions:
 extra_css:
   - assets/stylesheets/navigation.css
   - assets/stylesheets/homepage.css
+  - assets/stylesheets/library.css
 
 extra_javascript:
   - assets/javascripts/mathjax.js
+  - assets/javascripts/library.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 
@@ -211,82 +213,6 @@ nav:
 
       - "2.2 翻译与专业术语整理":
           02-format-trans/02-translation.md
-
-#       - "2.3 HTML格式综述制作":
-#           02-format-trans/03-html-review.md 
-
-
-#   - "3. 科研图表与流程图":
-
-#       - "本章介绍":
-#           03-figure/index.md
-
-#       - "3.1 流程图和技术路线图":
-#           03-figure/01-flowchart.md
-
-#       - "3.2 Python科研绘图":
-#           03-figure/02-python-figure.md
-
-#       - "3.3 MATLAB科研绘图":
-#           03-figure/03-matlab-figure.md
-
-#       - "3.4 科研图片排版":
-#           03-figure/04-figure-layout.md
-
-
-#   - "4. 论文总结与成果展示":
-
-#       - "本章介绍":
-#           04-presentation/index.md
-
-#       - "4.1 大模型辅助论文总结":
-#           04-presentation/01-paper-summary.md
-
-#       - "4.2 学术PPT制作":
-#           04-presentation/02-ppt.md
-
-#       - "4.3 视频剪辑和配音":
-#           04-presentation/03-video.md
-
-
-#   - "5. 编程与专业知识学习":
-
-#       - "本章介绍":
-#           05-professional/index.md
-
-#       - "5.1 风电基础":
-#           05-professional/01-wind-power.md
-
-#       - "5.2 机器人基础":
-#           05-professional/02-robotics.md
-
-#       - "5.3 Python和MATLAB":
-#           05-professional/03-programming.md
-
-#       - "5.4 深度学习":
-#           05-professional/04-deep-learning.md
-
-#       - "5.5 大模型科研应用":
-#           05-professional/05-large-language-model.md
-
-
-#   - "6. 综合实践":
-
-#       - "本章介绍":
-#           06-practice/index.md
-
-#       - "6.1 建立个人文献库":
-#           06-practice/01-zotero-library.md
-
-#       - "6.2 完成论文阅读卡片":
-#           06-practice/02-paper-card.md
-
-#       - "6.3 绘制技术路线图":
-#           06-practice/03-flowchart.md
-
-#       - "6.4 完成科研汇报PPT":
-#           06-practice/04-presentation.md
-
 
   - "从零制作与部署本站":
 

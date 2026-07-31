@@ -35,11 +35,11 @@ nav:
 
   - "1. 文献检索与管理":
       - "1.1 文献检索工具": 01-literature/01-search-tools.md
-      - "1.2 文献筛选方法": 01-literature/02-screening.md
+      - "1.2 文献筛选方法": 01-literature/02-literature-screening.md
 
-  - "2. 网站制作与部署":
-      - "教程总览": 02-site-building/index.md
-      - "2.1 准备环境": 02-site-building/01-environment.md
+  - "3. 网站制作与部署":
+      - "教程总览": 03-site-building/index.md
+      - "3.1 准备环境": 03-site-building/01-environment.md
 ```
 
 `1. 文献检索与管理` 和 `2. 网站制作与部署` 是一级下拉栏目。不要启用 `navigation.expand`，否则所有栏目默认同时展开。
@@ -51,7 +51,7 @@ nav:
 同一网站优先使用相对路径：
 
 ```markdown
-[下一节](02-screening.md)
+[下一节](02-literature-screening.md)
 [返回首页](../index.md)
 [打开外部网站](https://example.com)
 ```
@@ -123,7 +123,7 @@ Material 的卡片语法适合把课程入口集中到首页：
 
     从目录配置到自动部署，逐步搭建知识库。
 
-    [开始学习](02-site-building/index.md)
+    [开始学习](03-site-building/index.md)
 
 </div>
 ```

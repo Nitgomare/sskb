@@ -19,6 +19,7 @@ theme:
 
 nav:
   - 图书首页: index.md
+  - 前置内容: 00-front-matter/index.md
   - "第1章 绪论": chapters/01-chapter/index.md
   - "第2章 能量转换和传输理论": chapters/02-chapter/index.md
   - "第3章 风力发电机组设计要求": chapters/03-chapter/index.md

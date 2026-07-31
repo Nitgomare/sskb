@@ -1,7 +1,7 @@
 site_name: "风能技术（第二版）"
 
 docs_dir: docs
-site_dir: "../../site/books/风能技术"
+site_dir: "../../site/book-sites/风能技术"
 
 theme:
   name: material
@@ -19,6 +19,7 @@ theme:
 
 nav:
   - 图书首页: index.md
+  - 前置内容: 00-front-matter/index.md
   - "作 者 简 介": chapters/01-chapter/index.md
   - "内 容 简 介": chapters/02-chapter/index.md
   - "图书在版编目 (CIP) 数据": chapters/03-cip/index.md
