@@ -20,6 +20,14 @@
 
     [进入独立图书站 :material-arrow-right:](../book-sites/风能技术/){ .md-button .md-button--primary target=_top }
 
+-   :material-wind-turbine:{ .lg .middle } **风力发电机组理论与设计**
+
+    ---
+
+    姚兴佳等著，系统介绍风能捕获、能量传递、机电能量转换，以及风电机组总体与关键部件设计。
+
+    [进入独立图书站 :material-arrow-right:](../book-sites/wind-turbine-theory-and-design/){ .md-button .md-button--primary target=_top }
+
 -   :material-brain:{ .lg .middle } **Utilizing Large-Scale Foundation Models for PHM**
 
     ---
