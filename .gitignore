@@ -3,3 +3,5 @@ site/
 __pycache__/
 *.pyc
 .DS_Store
+book-sources/
+books/*/docs/split-report.txt

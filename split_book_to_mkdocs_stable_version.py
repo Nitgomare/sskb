@@ -13,7 +13,7 @@
         --images-dir "D:/books/source/images" \
         --project-dir "D:/knowledge-base/books/wind-energy" \
         --site-name "风能技术" \
-        --site-dir "../../site/books/wind-energy" \
+        --site-dir "../../site/book-sites/wind-energy" \
         --homepage "/" \
         --clean
 
@@ -1215,7 +1215,7 @@ def interactive_options(args: argparse.Namespace) -> argparse.Namespace:
     if not args.site_dir:
         args.site_dir = prompt_text(
             "构建输出 site_dir",
-            default=f"../../site/books/{project_name}",
+            default=f"../../site/book-sites/{project_name}",
         )
 
     if args.homepage is None:
@@ -1307,7 +1307,7 @@ def main() -> None:
             args.site_name = Path(args.markdown).stem
         if args.site_dir is None:
             project_name = Path(args.project_dir).name or "book"
-            args.site_dir = f"../../site/books/{project_name}"
+            args.site_dir = f"../../site/book-sites/{project_name}"
         if args.homepage is None:
             args.homepage = "/"
         if args.icon is None:
