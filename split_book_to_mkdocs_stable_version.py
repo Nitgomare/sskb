@@ -64,6 +64,7 @@ from urllib.parse import unquote
 
 
 CHAPTER_HEADING_RE = re.compile(r"^\s*##\s+(.+?)\s*$")
+TOP_LEVEL_HEADING_RE = re.compile(r"^\s*#{1,2}\s+(.+?)\s*$")
 SECTION_1_RE = re.compile(
     r"^\s*#{3,6}\s+(\d{1,3})\.1(?:[.．、:：]?(?:\s+|$))"
 )
@@ -91,6 +92,32 @@ CHAPTER_TITLE_PATTERNS = [
 NUMBERED_SUBHEADING_RE = re.compile(
     r"^(?P<number>\d+(?:\.\d+)+)\s*[.．、:：]?\s*(?P<title>.+?)$"
 )
+
+CHINESE_CHAPTER_TITLE_RE = re.compile(
+    r"^第\s*(?P<number>[零〇一二两三四五六七八九十百千]+)\s*章\s*"
+    r"(?:[.．、:：\-—]\s*)?(?P<title>.+?)$"
+)
+
+CHINESE_DIGITS = {
+    "零": 0,
+    "〇": 0,
+    "一": 1,
+    "二": 2,
+    "两": 2,
+    "三": 3,
+    "四": 4,
+    "五": 5,
+    "六": 6,
+    "七": 7,
+    "八": 8,
+    "九": 9,
+}
+
+CHINESE_UNITS = {
+    "十": 10,
+    "百": 100,
+    "千": 1000,
+}
 
 
 FRONT_MATTER_TITLES = {
@@ -154,6 +181,10 @@ HTML_IMAGE_RE = re.compile(
     flags=re.IGNORECASE,
 )
 
+EPUB_TOC_LINK_RE = re.compile(
+    r"\[([^\]]+)\]\(#[^)]+\.xhtml_hanvon_toc_\d+\)"
+)
+
 DEFAULT_MATHJAX = r'''window.MathJax = {
   tex: {
     inlineMath: [["\\(", "\\)"], ["$", "$"]],
@@ -214,9 +245,40 @@ def normalize_heading_key(value: str) -> str:
     return value.casefold()
 
 
+def parse_chinese_number(value: str) -> int | None:
+    """把一至九千九百九十九范围内的常见中文数字转换为整数。"""
+    total = 0
+    current_digit: int | None = None
+
+    for character in value:
+        if character in CHINESE_DIGITS:
+            current_digit = CHINESE_DIGITS[character]
+            continue
+
+        unit = CHINESE_UNITS.get(character)
+        if unit is None:
+            return None
+
+        total += (1 if current_digit is None else current_digit) * unit
+        current_digit = None
+
+    if current_digit is not None:
+        total += current_digit
+
+    return total or None
+
+
 def parse_chapter_title(value: str) -> tuple[int, str] | None:
-    """识别常见章标题：1 标题、1. 标题、第1章 标题、Chapter 1 标题。"""
+    """识别常见章标题，包括“第一章”和“第1章”等形式。"""
     cleaned = clean_heading_text(value)
+
+    chinese_match = CHINESE_CHAPTER_TITLE_RE.match(cleaned)
+    if chinese_match:
+        number = parse_chinese_number(chinese_match.group("number"))
+        title = clean_heading_text(chinese_match.group("title"))
+
+        if number is not None and 1 <= number <= 9999 and title:
+            return number, title
 
     for pattern in CHAPTER_TITLE_PATTERNS:
         match = pattern.match(cleaned)
@@ -345,12 +407,19 @@ def find_chapter_starts(lines: list[str]) -> DocumentStructure:
 
     if starts:
         # 带编号文档：在最后一个章节之后查找后置内容起点。
+        # EPUB 转换结果可能把“参考文献”等标成 H1，而正文章标题是 H2，
+        # 因此这里同时接受一级和二级标题。
         last_chapter_line = starts[-1].line_index
         back_matter_line: int | None = None
 
-        for index, _, title in h2_items:
-            if index <= last_chapter_line:
+        for index in range(last_chapter_line + 1, len(lines)):
+            match = TOP_LEVEL_HEADING_RE.match(
+                lines[index].rstrip("\r\n")
+            )
+            if not match:
                 continue
+
+            title = clean_heading_text(match.group(1))
             if normalize_heading_key(title) in BACK_MATTER_TITLES:
                 back_matter_line = index
                 break
@@ -943,6 +1012,9 @@ def split_book_to_project(
         front_dir.mkdir(parents=True, exist_ok=True)
 
         front_content = "".join(front_lines)
+        # Pandoc 会保留部分 EPUB 阅读器专用目录锚点。分章后这些锚点
+        # 不再位于同一页面，因此保留目录文字、移除失效的旧链接。
+        front_content = EPUB_TOC_LINK_RE.sub(r"\1", front_content)
         front_content, front_image_count, front_missing = copy_and_rewrite_images(
             content=front_content,
             markdown_file=markdown_file,
