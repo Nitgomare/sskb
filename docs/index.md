@@ -1,6 +1,16 @@
 # 科研新手实用培训
 
-面向刚进入课题组的研究生，提供两项马上能用的科研技能课程，以及持续整理的专业书库。
+面向刚进入课题组的研究生，集中整理科研方法、专业资料，以及可执行的编程与人工智能学习路径。
+
+<div class="learning-callout" markdown>
+
+## :material-code-braces: 编程与人工智能学习中心
+
+Python 数据分析、机器学习与深度学习三条独立学习路径。课程、教材和练习顺序已经配好，可按周推进。
+
+[选择学习路径 :material-arrow-right:](programming/index.md){ .md-button .md-button--primary }
+
+</div>
 
 <div class="library-hero" markdown>
 

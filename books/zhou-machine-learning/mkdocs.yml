@@ -1,0 +1,49 @@
+site_name: 周志华《机器学习》· 教材主线学习站
+site_description: 以西瓜书为主、学堂在线视频为辅的研究生机器学习学习站
+docs_dir: docs
+site_dir: ../../site/book-sites/zhou-machine-learning
+theme:
+  name: material
+  language: zh
+  icon: {logo: material/book-education}
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: orange
+      toggle: {icon: material/brightness-7, name: 切换深色模式}
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: orange
+      toggle: {icon: material/brightness-4, name: 切换浅色模式}
+  features: [navigation.sections, navigation.top, navigation.footer, navigation.path, content.code.copy, content.tabs.link]
+nav:
+  - 学习站首页: index.md
+  - 16章教材路线: reading-map.md
+  - 教材第1–3章 · 基础: modules/01-foundations.md
+  - 教材第4–6章 · 经典方法 I: modules/02-classic-methods.md
+  - 教材第7–10章 · 经典方法 II: modules/03-more-methods.md
+  - 教材第11–16章 · 研究生进阶: modules/04-advanced.md
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+      toc_depth: 2-3
+extra_css: [assets/stylesheets/study-site.css]
+extra_javascript: [assets/javascripts/study-progress.js]
+extra:
+  homepage: /programming/
+copyright: '返回 <a href="/programming/">编程与人工智能学习中心</a>'
