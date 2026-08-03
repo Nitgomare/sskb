@@ -58,8 +58,8 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 2-3
-extra_css: [assets/stylesheets/study-site.css]
-extra_javascript: [assets/javascripts/study-progress.js]
+extra_css: [assets/stylesheets/study-site.css, assets/stylesheets/back-to-main.css]
+extra_javascript: [assets/javascripts/study-progress.js, assets/javascripts/back-to-main.js]
 extra:
   homepage: /programming/
 copyright: '返回 <a href="/programming/">编程与人工智能学习中心</a>'

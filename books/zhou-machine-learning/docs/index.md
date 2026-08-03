@@ -13,6 +13,7 @@ hide:
 
 [从教材第 1 章开始](modules/01-foundations.md){ .md-button .md-button--primary }
 [下载 EPUB 教材](downloads/周志华-机器学习.epub){ .md-button download }
+[下载 PDF 教材](#pdf-download){ .md-button }
 
 </div>
 
@@ -32,12 +33,23 @@ hide:
 
 </div>
 
-## 两项资源
+## 学习资源
 
 | 资源 | 在本站中的角色 | 用途 |
 |---|---|---|
 | [《机器学习》EPUB 教材](downloads/周志华-机器学习.epub) | **主资源** | 全 16 章正文、习题、阅读材料；章节导航完全以此为准 |
+| [《机器学习》PDF 教材](#pdf-download) | **主资源** | 扫描版原书；因部署平台单文件大小限制，按原页序无损分为上、下两册 |
 | [学堂在线《机器学习初步》](https://www.xuetangx.com/course/nju0802bt/31381272) | 辅助资源 | 周志华主讲的入门课程，用于辅助教材第 1–9 章中的基础概念和经典算法 |
+
+## PDF 下载 { #pdf-download }
+
+PDF 保留原扫描页，不做降质压缩。请按顺序下载阅读：
+
+[下载上册 · 第 1–221 页](downloads/周志华-机器学习-PDF-上册-第1-221页.pdf){ .md-button .md-button--primary download }
+[下载下册 · 第 222–442 页](downloads/周志华-机器学习-PDF-下册-第222-442页.pdf){ .md-button .md-button--primary download }
+
+!!! note "为什么分为两册？"
+    原 PDF 约 37.5 MiB，超过 Cloudflare Pages 的 25 MiB 单文件上限。拆分仅改变文件边界，不改变页面内容与清晰度。
 
 !!! important "覆盖边界"
     视频公开大纲覆盖绪论、模型评估、线性模型、决策树、支持向量机、神经网络、贝叶斯分类器、集成学习与聚类。教材第 10–16 章没有在本站强行配视频，按书本作为研究生进阶自学内容。

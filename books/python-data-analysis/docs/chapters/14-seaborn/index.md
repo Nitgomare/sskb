@@ -1,758 +1,477 @@
 # 14 Seaborn图表
 
-</div>
+Seaborn模块与Matplotlib模块相似，也是Python数据可视化分析的第三方模块。由于Seaborn在Matplotlib的基础上进行了更高级的API封装，所以Seaborn可以通过一个高级界面来绘制更加有吸引力的统计图形。
 
-<div class="part">
-
-</div>
-
-<div class="header2">
-
-
-</div>
-
-<div class="part">
-
-<span style="font-size:16px;font-family:'PingFang SC';">Seaborn模块与Matplotlib模块相似，也是Python数据可视化分析的第三方模块。由于Seaborn在Matplotlib的基础上进行了更高级的API封装，所以Seaborn可以通过一个高级界面来绘制更加有吸引力的统计图形。</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">本章知识架构如下。</span>
-
-<div style="display: block;text-align:center;">
+本章知识架构如下。
 
 <img src="images/image_495.jpg" width="900" />
 
-</div>
+## 14.1 了解Seaborn图表
 
-</div>
+Seaborn是基于Matplotlib的Python高级可视化效果模块，偏向于统计图表，因此针对的主要是数据挖掘和机器学习中的变量特征选取。相比Matplotlib，它的优点是语法更简单，绘制图表不需要花很多功夫去修饰，它的缺点是绘图方式比较局限，不够灵活。
 
-<span id="Section093.xhtml"></span>
+### 14.1.1 Seaborn概述
 
-<div id="Section093.xhtml_Section093.xhtml">
+Seaborn在Matplotlib基础上进行了更高级的API封装，使得绘图更加容易。Seaborn主要包括以下功能： <img src="images/image_496.svg" width="14" />
 
-</div>
+ 计算多变量间关系的面向数据集接口。 <img src="images/image_496.svg" width="14" />
 
-<div class="header2">
+ 可视化类别变量的观测与统计。 <img src="images/image_496.svg" width="14" />
 
-## 14.1 了解Seaborn图表
+ 可视化单变量或多变量分布并与其子数据集比较。 <img src="images/image_496.svg" width="14" />
 
-</div>
+ 控制线性回归的不同因变量并进行参数估计与绘图。 <img src="images/image_496.svg" width="14" />
 
-<div class="part">
+ 对复杂数据进行整体结构可视化。 <img src="images/image_496.svg" width="14" />
 
-<span style="font-size:16px;font-family:'PingFang SC';">Seaborn是基于Matplotlib的Python高级可视化效果模块，偏向于统计图表，因此针对的主要是数据挖掘和机器学习中的变量特征选取。相比Matplotlib，它的优点是语法更简单，绘制图表不需要花很多功夫去修饰，它的缺点是绘图方式比较局限，不够灵活。</span>
+ 对多表统计图的制作高度抽象并简化可视化过程。 <img src="images/image_496.svg" width="14" />
 
-</div>
+ 提供多个主题渲染Matplotlib图表的样式。 <img src="images/image_496.svg" width="14" />
 
-<div class="header3">
+ 提供调色板工具，可生动再现数据。
 
-### 14.1.1 Seaborn概述
-
-</div>
-
-<div class="part">
-
-<span style="font-size:16px;font-family:'PingFang SC';">Seaborn在Matplotlib基础上进行了更高级的API封装，使得绘图更加容易。Seaborn主要包括以下功能： <img src="images/image_496.svg" width="14" /></span>
-
-<span style="font-size:16px;font-family:'PingFang SC';"> 计算多变量间关系的面向数据集接口。 <img src="images/image_496.svg" width="14" /></span>
-
-<span style="font-size:16px;font-family:'PingFang SC';"> 可视化类别变量的观测与统计。 <img src="images/image_496.svg" width="14" /></span>
-
-<span style="font-size:16px;font-family:'PingFang SC';"> 可视化单变量或多变量分布并与其子数据集比较。 <img src="images/image_496.svg" width="14" /></span>
-
-<span style="font-size:16px;font-family:'PingFang SC';"> 控制线性回归的不同因变量并进行参数估计与绘图。 <img src="images/image_496.svg" width="14" /></span>
-
-<span style="font-size:16px;font-family:'PingFang SC';"> 对复杂数据进行整体结构可视化。 <img src="images/image_496.svg" width="14" /></span>
-
-<span style="font-size:16px;font-family:'PingFang SC';"> 对多表统计图的制作高度抽象并简化可视化过程。 <img src="images/image_496.svg" width="14" /></span>
-
-<span style="font-size:16px;font-family:'PingFang SC';"> 提供多个主题渲染Matplotlib图表的样式。 <img src="images/image_496.svg" width="14" /></span>
-
-<span style="font-size:16px;font-family:'PingFang SC';"> 提供调色板工具，可生动再现数据。</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">Seaborn是基于Matplotlib的图形可视化Python包，它提供了一种高度交互式的界面，便于用户绘制各种有吸引力的统计图表，如图14.1所示。</span>
-
-<div style="display: block;text-align:center;">
+Seaborn是基于Matplotlib的图形可视化Python包，它提供了一种高度交互式的界面，便于用户绘制各种有吸引力的统计图表，如图14.1所示。
 
 <img src="images/image_497.jpg" width="900" />
 
-</div>
+<p class="book-caption">图14.1 Seaborn统计图表</p>
 
-<span style="font-size:16px;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';display: block;text-align:center;">图14.1 Seaborn统计图表</span>
+### 14.1.2 安装Seaborn模块
 
-</div>
+安装Seaborn模块可以使用pip工具，安装命令如下：
 
-<div class="header3">
+```text
+pip install seaborn
+```
 
-### 14.1.2 安装Seaborn模块
+也可以在PyCharm开发环境中安装。需要注意的是，如果安装时报错，可能是因为读者没有安装Scipy模块。Seaborn依赖Scipy，所以应首先安装Scipy。
 
-</div>
+### 14.1.3 体验Seaborn图表
 
-<div class="part">
+**【例14.1】**绘制简单的柱形图**（实例位置：资源包\\Code\\14\\01）**
 
-<span style="font-size:16px;font-family:'PingFang SC';">安装Seaborn模块可以使用pip工具，安装命令如下：</span>
+先来绘制一款简单的柱形图，程序代码如下：
 
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">pip install seaborn</span>
+```text
+1  import seaborn as sns
+2  import matplotlib.pyplot as plt
+3  sns.set_style('darkgrid')      # 设置图表风格
+4  plt.figure(figsize=(4,3))    # 创建画布
+5  x=[1,2,3,4,5]                    #  *x*轴数据
+6  y=[10,20,30,40,50]               #  *y*轴数据
+7  sns.barplot(x=x,y=y)             # 绘制柱形图
+8  plt.show()                     # 显示图表
+```
 
-<span style="font-size:16px;font-family:'PingFang SC';">也可以在PyCharm开发环境中安装。需要注意的是，如果安装时报错，可能是因为读者没有安装Scipy模块。Seaborn依赖Scipy，所以应首先安装Scipy。</span>
+（1）首先导入Seaborn和Matplotlib模块，由于Seaborn模块是Matplotlib模块的补充，所以绘制图表前必须引用Matplotlib模块。
 
-</div>
+（2）设置Seaborn的背景风格为darkgrid。
 
-<div class="header3">
+（3）指定*x*轴、*y*轴数据。
 
-### 14.1.3 体验Seaborn图表
+（4）使用barplot()函数绘制柱形图。
 
-</div>
-
-<div class="part">
-
-<span style="font-size:16px;font-weight: bold;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';"><span style="font-size:16px;font-weight: bold;font-family:'PingFang SC';">**【例14.1】**</span><span style="font-size:16px;font-family:'PingFang SC';">绘制简单的柱形图</span>**（实例位置：资源包\\Code\\14\\01）**</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">先来绘制一款简单的柱形图，程序代码如下：</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">1  import seaborn as sns</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">2  import matplotlib.pyplot as plt</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">3  sns.set_style('darkgrid')      # </span>设置图表风格</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">4  plt.figure(figsize=(4,3))    # </span>创建画布</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">5  x=\[1,2,3,4,5\]                    #  </span><span style="font-size:14px;font-style: oblique;color:rgb(0, 0, 0);font-family:'Source Code Pro';">*x*</span>轴数据</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">6  y=\[10,20,30,40,50\]               #  </span><span style="font-size:14px;font-style: oblique;color:rgb(0, 0, 0);font-family:'Source Code Pro';">*y*</span>轴数据</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">7  sns.barplot(x=x,y=y)             # </span>绘制柱形图</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">8  plt.show()                     # </span>显示图表</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">（1）首先导入Seaborn和Matplotlib模块，由于Seaborn模块是Matplotlib模块的补充，所以绘制图表前必须引用Matplotlib模块。</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">（2）设置Seaborn的背景风格为darkgrid。</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">（3）指定<span style="font-size:16px;font-style: oblique;font-family:'PingFang SC';">*x*</span>轴、<span style="font-size:16px;font-style: oblique;font-family:'PingFang SC';">*y*</span>轴数据。</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">（4）使用barplot()函数绘制柱形图。</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">运行程序，输出效果如图14.2所示。可见，Seaborn默认的灰色网格底色比Matplotlib更加柔和。</span>
-
-<div style="display: block;text-align:center;">
+运行程序，输出效果如图14.2所示。可见，Seaborn默认的灰色网格底色比Matplotlib更加柔和。
 
 <img src="images/image_498.jpg" width="579" />
 
-</div>
+<p class="book-caption">图14.2 简单柱形图</p>
 
-<span style="font-size:16px;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';display: block;text-align:center;">图14.2 简单柱形图</span>
+## 14.2 Seaborn图表的基本设置
 
-</div>
+### 14.2.1 设置背景风格
 
-<span id="Section094.xhtml"></span>
+使用axes_style()和set_style()函数可以设置Seaborn背景风格。Seaborn有5个主题，可适用于不同的应用场景和人群偏好。 <img src="images/image_499.svg" width="14" />
 
-<div id="Section094.xhtml_Section094.xhtml">
+ darkgrid：灰色网格（默认值）。 <img src="images/image_499.svg" width="14" />
 
-</div>
+ whitegrid：白色网格。 <img src="images/image_499.svg" width="14" />
 
-<div class="header2">
+ dark：灰色背景。 <img src="images/image_499.svg" width="14" />
 
-## 14.2 Seaborn图表的基本设置
+ white：白色背景。 <img src="images/image_499.svg" width="14" />
 
-</div>
+ ticks：四周带刻度线的白色背景。
 
-<div class="part">
+网格有助于查找图表中的定量信息，灰色网格主题中的白线能避免影响数据的表现，白色网格主题则更适合表达“重数据元素”。
 
-</div>
+### 14.2.2 控制边框的显示方式
 
-<div class="header3">
+控制边框的显示方式，主要使用despine()函数，具体用法如下。
 
-### 14.2.1 设置背景风格
+（1）移除顶部和右边边框，代码如下：
 
-</div>
+```text
+sns.despine()
+```
 
-<div class="part">
+（2）使两坐标轴离开一段距离，代码如下：
 
-<span style="font-size:16px;font-family:'PingFang SC';">使用axes_style()和set_style()函数可以设置Seaborn背景风格。Seaborn有5个主题，可适用于不同的应用场景和人群偏好。 <img src="images/image_499.svg" width="14" /></span>
+```text
+sns.despine(offset=10, trim=True)
+```
 
-<span style="font-size:16px;font-family:'PingFang SC';"> darkgrid：灰色网格（默认值）。 <img src="images/image_499.svg" width="14" /></span>
+（3）移除左边边框，与set_style()的白色网格配合使用效果更佳。代码如下：
 
-<span style="font-size:16px;font-family:'PingFang SC';"> whitegrid：白色网格。 <img src="images/image_499.svg" width="14" /></span>
+```text
+sns.set_style("whitegrid")
+sns.despine(left=True)
+```
 
-<span style="font-size:16px;font-family:'PingFang SC';"> dark：灰色背景。 <img src="images/image_499.svg" width="14" /></span>
+（4）移除指定边框，值设置为True即可。代码如下：
 
-<span style="font-size:16px;font-family:'PingFang SC';"> white：白色背景。 <img src="images/image_499.svg" width="14" /></span>
+```text
+sns.despine(fig=None, ax=None, top=True, right=True, left=True, bottom=False, offset=None, trim=False)
+```
 
-<span style="font-size:16px;font-family:'PingFang SC';"> ticks：四周带刻度线的白色背景。</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">网格有助于查找图表中的定量信息，灰色网格主题中的白线能避免影响数据的表现，白色网格主题则更适合表达“重数据元素”。</span>
-
-</div>
-
-<div class="header3">
-
-### 14.2.2 控制边框的显示方式
-
-</div>
-
-<div class="part">
-
-<span style="font-size:16px;font-family:'PingFang SC';">控制边框的显示方式，主要使用despine()函数，具体用法如下。</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">（1）移除顶部和右边边框，代码如下：</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">sns.despine()</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">（2）使两坐标轴离开一段距离，代码如下：</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">sns.despine(offset=10, trim=True)</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">（3）移除左边边框，与set_style()的白色网格配合使用效果更佳。代码如下：</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">sns.set_style("whitegrid")</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">sns.despine(left=True)</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">（4）移除指定边框，值设置为True即可。代码如下：</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">sns.despine(fig=None, ax=None, top=True, right=True, left=True, bottom=False, offset=None, trim=False)</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">设置显示方式后的效果如图14.3所示。</span>
-
-<div style="display: block;text-align:center;">
+设置显示方式后的效果如图14.3所示。
 
 <img src="images/image_500.jpg" width="900" />
 
-</div>
+<p class="book-caption">图14.3 设置显示方式后的效果</p>
 
-<span style="font-size:16px;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';display: block;text-align:center;">图14.3 设置显示方式后的效果</span>
+## 14.3 绘制常见图表
 
-</div>
+### 14.3.1 绘制散点图—replot()函数
 
-<span id="Section095.xhtml"></span>
+Seaborn绘制散点图主要使用replot()函数，相关语法可参考14.3.2节“绘制折线图”相关说明。
 
-<div id="Section095.xhtml_Section095.xhtml">
+**【例14.2】**绘制散点图分析“小费”**（实例位置：资源包\\Code\\14\\02）**
 
-</div>
+下面通过Seaborn提供的内置数据集tips（小费数据集）绘制散点图，程序代码如下：
 
-<div class="header2">
+```text
+1  import matplotlib.pyplot as plt
+2  import seaborn as sns
+3  sns.set_style('darkgrid')                                  # 灰色网格
+4  # 加载内置数据集tips(小费数据集)，data_home参数表示数据集路径
+5  tips=sns.load_dataset(name='tips',data_home='seaborn-data-master')
+6  sns.relplot(x='total_bill',y='tip',data=tips,color='r')    # 绘制散点图
+7  plt.show()                                                 # 显示图表
+```
 
-## 14.3 绘制常见图表
-
-</div>
-
-<div class="part">
-
-</div>
-
-<div class="header3">
-
-### 14.3.1 绘制散点图—replot()函数
-
-</div>
-
-<div class="part">
-
-<span style="font-size:16px;font-family:'PingFang SC';">Seaborn绘制散点图主要使用replot()函数，相关语法可参考14.3.2节“绘制折线图”相关说明。</span>
-
-<span style="font-size:16px;font-weight: bold;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';"><span style="font-size:16px;font-weight: bold;font-family:'PingFang SC';">**【例14.2】**</span><span style="font-size:16px;font-family:'PingFang SC';">绘制散点图分析“小费”</span>**（实例位置：资源包\\Code\\14\\02）**</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">下面通过Seaborn提供的内置数据集tips（小费数据集）绘制散点图，程序代码如下：</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">1  import matplotlib.pyplot as plt</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">2  import seaborn as sns</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">3  sns.set_style('darkgrid')                                  # </span>灰色网格</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">4  # </span>加载内置数据集<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">tips(</span>小费数据集<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">)</span>，<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">data_home</span>参数表示数据集路径</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">5  tips=sns.load_dataset(name='tips',data_home='seaborn-data-master')</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">6  sns.relplot(x='total_bill',y='tip',data=tips,color='r')    # </span>绘制散点图</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">7  plt.show()                                                 # </span>显示图表</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">运行程序，输出结果如图14.4所示。</span>
-
-</div>
-
-<div class="header3">
+运行程序，输出结果如图14.4所示。
 
 ### 说明
 
-</div>
+在加载内置数据集tips数据时，需要在线访问网络资源，如果当前网络无法在线获取数据，则可以使用资源包中的离线数据tips.csv。
 
-<div class="part">
+**技巧**
 
-<span style="font-size:16px;font-family:'PingFang SC';">在加载内置数据集tips数据时，需要在线访问网络资源，如果当前网络无法在线获取数据，则可以使用资源包中的离线数据tips.csv。</span>
+上述代码使用了内置数据集tips，该数据集通过tips.head()显示部分数据。tips数据结构如图14.5所示，各字段的说明如下。
 
-<span style="font-size:16px;font-weight: bold;font-family:'PingFang SC';">**技巧**</span>
+total_bill：表示总消费。
 
-<span style="font-size:16px;font-family:'PingFang SC';">上述代码使用了内置数据集tips，该数据集通过tips.head()显示部分数据。tips数据结构如图14.5所示，各字段的说明如下。</span>
+tip：表示小费。
 
-<span style="font-size:16px;font-family:'PingFang SC';">total_bill：表示总消费。</span>
+sex：表示性别。
 
-<span style="font-size:16px;font-family:'PingFang SC';">tip：表示小费。</span>
+smoker：表示是否吸烟。
 
-<span style="font-size:16px;font-family:'PingFang SC';">sex：表示性别。</span>
+day：表示周几。
 
-<span style="font-size:16px;font-family:'PingFang SC';">smoker：表示是否吸烟。</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">day：表示周几。</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">time：表示用餐类型。如早餐（breakfast）、午餐（lunch）、晚餐（dinner）。</span>
-
-<div style="display: block;text-align:center;">
+time：表示用餐类型。如早餐（breakfast）、午餐（lunch）、晚餐（dinner）。
 
 <img src="images/image_501.jpg" width="782" />
 
-</div>
-
-<span style="font-size:16px;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';display: block;text-align:center;">▲图14.4 散点图</span>
-
-<div style="display: block;text-align:center;">
+<p class="book-caption">▲图14.4 散点图</p>
 
 <img src="images/image_502.jpg" width="867" />
 
-</div>
+<p class="book-caption">▲图14.5 tips部分数据</p>
 
-<span style="font-size:16px;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';display: block;text-align:center;">▲图14.5 tips部分数据</span>
+### 14.3.2 绘制折线图—relplot()、lineplot()函数
 
-</div>
+在Seaborn中绘制折线图有两种方法：一是在relplot()函数中通过设置kind参数为line；二是使用lineplot()函数直接绘制折线图。
 
-<div class="header3">
+**1. 使用relplot()函数**
 
-### 14.3.2 绘制折线图—relplot()、lineplot()函数
+**【例14.3】**绘制学生语文成绩折线图1**（实例位置：资源包\\Code\\14\\03）**
 
-</div>
+使用relplot()函数绘制学生语文成绩折线图，程序代码如下：
 
-<div class="part">
+```text
+1  import pandas as pd
+2  import matplotlib.pyplot as plt
+3  import seaborn as sns
+4  sns.set_style('darkgrid')                              # 灰色网格
+5  plt.rcParams['font.sans-serif']=['SimHei']               # 解决中文乱码
+6  df1=pd.read_excel('data5.xls')                         # 读取Excel文件
+7  sns.relplot(x="学号", y="语文", kind="line", data=df1) # 绘制折线图
+8  plt.show()                                             # 显示图表
+```
 
-<span style="font-size:16px;font-family:'PingFang SC';">在Seaborn中绘制折线图有两种方法：一是在relplot()函数中通过设置kind参数为line；二是使用lineplot()函数直接绘制折线图。</span>
+运行程序，输出结果如图14.6所示。
 
-<span style="font-size:16px;font-weight: bold;color:rgb(0, 0, 0);font-family:'PingFang SC';">**1. 使用relplot()函数**</span>
+**2. 使用lineplot()函数**
 
-<span style="font-size:16px;font-weight: bold;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';"><span style="font-size:16px;font-weight: bold;font-family:'PingFang SC';">**【例14.3】**</span><span style="font-size:16px;font-family:'PingFang SC';">绘制学生语文成绩折线图1</span>**（实例位置：资源包\\Code\\14\\03）**</span>
+**【例14.4】**绘制学生语文成绩折线图2**（实例位置：资源包\\Code\\14\\04）**
 
-<span style="font-size:16px;font-family:'PingFang SC';">使用relplot()函数绘制学生语文成绩折线图，程序代码如下：</span>
+使用lineplot()函数绘制学生语文成绩折线图，程序代码如下：
 
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">1  import pandas as pd</span>
+```text
+1  import pandas as pd
+2  import matplotlib.pyplot as plt
+3  import seaborn as sns
+4  sns.set_style('darkgrid')                   # 灰色网格
+5  plt.rcParams['font.sans-serif']=['SimHei']    # 解决中文乱码
+6  df1=pd.read_excel('data5.xls')              # 读取Excel文件
+7  sns.lineplot(x="学号", y="语文",data=df1)   # 绘制折线图
+8  plt.show()                                  # 显示图表
+```
 
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">2  import matplotlib.pyplot as plt</span>
+**【例14.5】**绘制多折线图分析学生各科成绩**（实例位置：资源包\\Code\\14\\05）**
 
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">3  import seaborn as sns</span>
+接下来，我们绘制多折线图，关键代码如下：
 
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">4  sns.set_style('darkgrid')                              # </span>灰色网格</span>
+```text
+1  dfs=[df1['语文'],df1['数学'],df1['英语']]
+2  sns.lineplot(data=dfs)
+```
 
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">5  plt.rcParams\['font.sans-serif'\]=\['SimHei'\]               # </span>解决中文乱码</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">6  df1=pd.read_excel('data5.xls')                         # </span>读取<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">Excel</span>文件</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">7  sns.relplot(x="</span>学号<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">", y="</span>语文<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">", kind="line", data=df1) # </span>绘制折线图</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">8  plt.show()                                             # </span>显示图表</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">运行程序，输出结果如图14.6所示。</span>
-
-<span style="font-size:16px;font-weight: bold;color:rgb(0, 0, 0);font-family:'PingFang SC';">**2. 使用lineplot()函数**</span>
-
-<span style="font-size:16px;font-weight: bold;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';"><span style="font-size:16px;font-weight: bold;font-family:'PingFang SC';">**【例14.4】**</span><span style="font-size:16px;font-family:'PingFang SC';">绘制学生语文成绩折线图2</span>**（实例位置：资源包\\Code\\14\\04）**</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">使用lineplot()函数绘制学生语文成绩折线图，程序代码如下：</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">1  import pandas as pd</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">2  import matplotlib.pyplot as plt</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">3  import seaborn as sns</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">4  sns.set_style('darkgrid')                   # </span>灰色网格</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">5  plt.rcParams\['font.sans-serif'\]=\['SimHei'\]    # </span>解决中文乱码</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">6  df1=pd.read_excel('data5.xls')              # </span>读取<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">Excel</span>文件</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">7  sns.lineplot(x="</span>学号<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">", y="</span>语文<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">",data=df1)   # </span>绘制折线图</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">8  plt.show()                                  # </span>显示图表</span>
-
-<span style="font-size:16px;font-weight: bold;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';"><span style="font-size:16px;font-weight: bold;font-family:'PingFang SC';">**【例14.5】**</span><span style="font-size:16px;font-family:'PingFang SC';">绘制多折线图分析学生各科成绩</span>**（实例位置：资源包\\Code\\14\\05）**</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">接下来，我们绘制多折线图，关键代码如下：</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">1  dfs=\[df1\['<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';">语文</span>'\],df1\['<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';">数学</span>'\],df1\['<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';">英语</span>'\]\]</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">2  sns.lineplot(data=dfs)</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">运行程序，输出结果如图14.7所示。</span>
-
-<div style="display: block;text-align:center;">
+运行程序，输出结果如图14.7所示。
 
 <img src="images/image_503.jpg" width="683" />
 
-</div>
-
-<span style="font-size:16px;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';display: block;text-align:center;">▲图14.6 折线图</span>
-
-<div style="display: block;text-align:center;">
+<p class="book-caption">▲图14.6 折线图</p>
 
 <img src="images/image_504.jpg" width="877" />
 
-</div>
+<p class="book-caption">▲图14.7 多折线图</p>
 
-<span style="font-size:16px;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';display: block;text-align:center;">▲图14.7 多折线图</span>
+### 14.3.3 绘制直方图—displot()函数
 
-</div>
+Seaborn绘制直方图主要使用displot()函数，语法如下：
 
-<div class="header3">
+```text
+sns.distplot(data,bins=None,hist=True,kde=True,rug=False,fit=None,color=None,axlabel=None,ax=None)
+```
 
-### 14.3.3 绘制直方图—displot()函数
+常用参数说明： <img src="images/image_505.svg" width="14" />
 
-</div>
+ data：数据。 <img src="images/image_505.svg" width="14" />
 
-<div class="part">
+ bins：设置矩形图数量。 <img src="images/image_505.svg" width="14" />
 
-<span style="font-size:16px;font-family:'PingFang SC';">Seaborn绘制直方图主要使用displot()函数，语法如下：</span>
+ hist：是否显示条形图。 <img src="images/image_505.svg" width="14" />
 
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">sns.distplot(data,bins=None,hist=True,kde=True,rug=False,fit=None,color=None,axlabel=None,ax=None)</span>
+ kde：是否显示核密度估计图，默认值为True，即显示核密度估计图。 <img src="images/image_505.svg" width="14" />
 
-<span style="font-size:16px;font-family:'PingFang SC';">常用参数说明： <img src="images/image_505.svg" width="14" /></span>
+ rug：是否在*x*轴上显示观测的小细条（边际毛毯）。 <img src="images/image_505.svg" width="14" />
 
-<span style="font-size:16px;font-family:'PingFang SC';"> data：数据。 <img src="images/image_505.svg" width="14" /></span>
+ fit：拟合的参数分布图形。
 
-<span style="font-size:16px;font-family:'PingFang SC';"> bins：设置矩形图数量。 <img src="images/image_505.svg" width="14" /></span>
+**【例14.6】**绘制简单直方图**（实例位置：资源包\\Code\\14\\06）**
 
-<span style="font-size:16px;font-family:'PingFang SC';"> hist：是否显示条形图。 <img src="images/image_505.svg" width="14" /></span>
+下面绘制一个简单的直方图，程序代码如下：
 
-<span style="font-size:16px;font-family:'PingFang SC';"> kde：是否显示核密度估计图，默认值为True，即显示核密度估计图。 <img src="images/image_505.svg" width="14" /></span>
+```text
+1  import pandas as pd
+2  import matplotlib.pyplot as plt
+3  import seaborn as sns
+4  sns.set_style('darkgrid')                 # 灰色网格
+5  plt.rcParams['font.sans-serif']=['SimHei']  # 解决中文乱码
+6  df1=pd.read_excel('data2.xls')            # 读取Excel文件
+7  data=df1[['得分']]                          # 绘图数据
+8  sns.distplot(data,rug=True)                 # 直方图，显示观测的小细条
+9  plt.show()                                # 显示图表
+```
 
-<span style="font-size:16px;font-family:'PingFang SC';"> rug：是否在<span style="font-size:16px;font-style: oblique;font-family:'PingFang SC';">*x*</span>轴上显示观测的小细条（边际毛毯）。 <img src="images/image_505.svg" width="14" /></span>
-
-<span style="font-size:16px;font-family:'PingFang SC';"> fit：拟合的参数分布图形。</span>
-
-<span style="font-size:16px;font-weight: bold;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';"><span style="font-size:16px;font-weight: bold;font-family:'PingFang SC';">**【例14.6】**</span><span style="font-size:16px;font-family:'PingFang SC';">绘制简单直方图</span>**（实例位置：资源包\\Code\\14\\06）**</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">下面绘制一个简单的直方图，程序代码如下：</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">1  import pandas as pd</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">2  import matplotlib.pyplot as plt</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">3  import seaborn as sns</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">4  sns.set_style('darkgrid')                 # </span>灰色网格</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">5  plt.rcParams\['font.sans-serif'\]=\['SimHei'\]  # </span>解决中文乱码</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">6  df1=pd.read_excel('data2.xls')            # </span>读取<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">Excel</span>文件</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">7  data=df1\[\['</span>得分<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">'\]\]                          # </span>绘图数据</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">8  sns.distplot(data,rug=True)                 # </span>直方图，显示观测的小细条</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">9  plt.show()                                # </span>显示图表</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">运行程序，输出结果如图14.8所示。</span>
-
-<div style="display: block;text-align:center;">
+运行程序，输出结果如图14.8所示。
 
 <img src="images/image_506.jpg" width="722" />
 
-</div>
+<p class="book-caption">图14.8 直方图</p>
 
-<span style="font-size:16px;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';display: block;text-align:center;">图14.8 直方图</span>
+### 14.3.4 绘制条形图—barplot()函数
 
-</div>
+Seaborn绘制条形图主要使用barplot()函数，语法如下：
 
-<div class="header3">
+```text
+sns.barplot(x=None,y=None,hue=None,data=None,order=None,hue_order=None,orient=None,color=None,
+palette=None,capsize=None,estimator=mean)
+```
 
-### 14.3.4 绘制条形图—barplot()函数
+常用参数说明： <img src="images/image_505.svg" width="14" />
 
-</div>
+ x、y：*x*轴、*y*轴数据。 <img src="images/image_505.svg" width="14" />
 
-<div class="part">
+ hue：分类字段。 <img src="images/image_505.svg" width="14" />
 
-<span style="font-size:16px;font-family:'PingFang SC';">Seaborn绘制条形图主要使用barplot()函数，语法如下：</span>
+ order、hue_order：变量绘图顺序。 <img src="images/image_505.svg" width="14" />
 
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">sns.barplot(x=None,y=None,hue=None,data=None,order=None,hue_order=None,orient=None,color=None,</span>
+ orient：条形图是水平显示还是垂直显示。 <img src="images/image_505.svg" width="14" />
 
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">palette=None,capsize=None,estimator=mean)</span>
+ capsize：误差线的宽度。 <img src="images/image_505.svg" width="14" />
 
-<span style="font-size:16px;font-family:'PingFang SC';">常用参数说明： <img src="images/image_505.svg" width="14" /></span>
+ estimator：每类变量的统计方式，默认值为平均值mean。
 
-<span style="font-size:16px;font-family:'PingFang SC';"> x、y：<span style="font-size:16px;font-style: oblique;font-family:'PingFang SC';">*x*</span>轴、<span style="font-size:16px;font-style: oblique;font-family:'PingFang SC';">*y*</span>轴数据。 <img src="images/image_505.svg" width="14" /></span>
+**【例14.7】**绘制多条形图分析学生各科成绩**（实例位置：资源包\\Code\\14\\07）**
 
-<span style="font-size:16px;font-family:'PingFang SC';"> hue：分类字段。 <img src="images/image_505.svg" width="14" /></span>
+通过前面的学习，我们已经能够绘制简单的条形图了。下面绘制学生成绩多条形图，程序代码如下：
 
-<span style="font-size:16px;font-family:'PingFang SC';"> order、hue_order：变量绘图顺序。 <img src="images/image_505.svg" width="14" /></span>
+```text
+1  import pandas as pd
+2  import matplotlib.pyplot as plt
+3  import seaborn as sns
+4  sns.set_style('darkgrid')                           # 灰色网格
+5  plt.rcParams['font.sans-serif']=['SimHei']            # 解决中文乱码
+6  df1=pd.read_excel('data5.xls',sheet_name='sheet2')  # 读取Excel文件
+7  sns.barplot(x='学号',y='得分',hue='学科',data=df1)    # 绘制条形图
+8  plt.show()                                          # 显示图表
+```
 
-<span style="font-size:16px;font-family:'PingFang SC';"> orient：条形图是水平显示还是垂直显示。 <img src="images/image_505.svg" width="14" /></span>
-
-<span style="font-size:16px;font-family:'PingFang SC';"> capsize：误差线的宽度。 <img src="images/image_505.svg" width="14" /></span>
-
-<span style="font-size:16px;font-family:'PingFang SC';"> estimator：每类变量的统计方式，默认值为平均值mean。</span>
-
-<span style="font-size:16px;font-weight: bold;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';"><span style="font-size:16px;font-weight: bold;font-family:'PingFang SC';">**【例14.7】**</span><span style="font-size:16px;font-family:'PingFang SC';">绘制多条形图分析学生各科成绩</span>**（实例位置：资源包\\Code\\14\\07）**</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">通过前面的学习，我们已经能够绘制简单的条形图了。下面绘制学生成绩多条形图，程序代码如下：</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">1  import pandas as pd</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">2  import matplotlib.pyplot as plt</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">3  import seaborn as sns</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">4  sns.set_style('darkgrid')                           # </span>灰色网格</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">5  plt.rcParams\['font.sans-serif'\]=\['SimHei'\]            # </span>解决中文乱码</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">6  df1=pd.read_excel('data5.xls',sheet_name='sheet2')  # </span>读取<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">Excel</span>文件</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">7  sns.barplot(x='</span>学号<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">',y='</span>得分<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">',hue='</span>学科<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">',data=df1)    # </span>绘制条形图</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">8  plt.show()                                          # </span>显示图表</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">运行程序，输出结果如图14.9所示。</span>
-
-<div style="display: block;text-align:center;">
+运行程序，输出结果如图14.9所示。
 
 <img src="images/image_507.jpg" width="737" />
 
-</div>
+<p class="book-caption">图14.9 条形图</p>
 
-<span style="font-size:16px;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';display: block;text-align:center;">图14.9 条形图</span>
+### 14.3.5 绘制线性回归模型—lmplot()函数
 
-</div>
+Seaborn可以直接绘制线性回归模型，用以描述线性关系，主要使用lmplot()函数，语法如下：
 
-<div class="header3">
+```text
+sns.lmplot(x,y,data,hue=None,col=None,row=None,palette=None,col_wrap=3,size=5,markers='o')
+```
 
-### 14.3.5 绘制线性回归模型—lmplot()函数
+常用参数说明： <img src="images/image_505.svg" width="14" />
 
-</div>
+ hue：散点图中的分类字段。 <img src="images/image_505.svg" width="14" />
 
-<div class="part">
+ col：列分类变量，构成子集。 <img src="images/image_505.svg" width="14" />
 
-<span style="font-size:16px;font-family:'PingFang SC';">Seaborn可以直接绘制线性回归模型，用以描述线性关系，主要使用lmplot()函数，语法如下：</span>
+ row：行分类变量。 <img src="images/image_505.svg" width="14" />
 
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">sns.lmplot(x,y,data,hue=None,col=None,row=None,palette=None,col_wrap=3,size=5,markers='o')</span>
+ col_wrap：控制每行子图数量。 <img src="images/image_505.svg" width="14" />
 
-<span style="font-size:16px;font-family:'PingFang SC';">常用参数说明： <img src="images/image_505.svg" width="14" /></span>
+ size：控制子图高度。 <img src="images/image_505.svg" width="14" />
 
-<span style="font-size:16px;font-family:'PingFang SC';"> hue：散点图中的分类字段。 <img src="images/image_505.svg" width="14" /></span>
+ markers：点的形状。
 
-<span style="font-size:16px;font-family:'PingFang SC';"> col：列分类变量，构成子集。 <img src="images/image_505.svg" width="14" /></span>
+**【例14.8】**绘制线性回归图表分析“小费”**（实例位置：资源包\\Code\\14\\08）**
 
-<span style="font-size:16px;font-family:'PingFang SC';"> row：行分类变量。 <img src="images/image_505.svg" width="14" /></span>
+同样使用tips数据集，绘制线性回归模型，关键代码如下：
 
-<span style="font-size:16px;font-family:'PingFang SC';"> col_wrap：控制每行子图数量。 <img src="images/image_505.svg" width="14" /></span>
+```text
+sns.lmplot(x='total_bill',y='tip',data=tips)
+```
 
-<span style="font-size:16px;font-family:'PingFang SC';"> size：控制子图高度。 <img src="images/image_505.svg" width="14" /></span>
-
-<span style="font-size:16px;font-family:'PingFang SC';"> markers：点的形状。</span>
-
-<span style="font-size:16px;font-weight: bold;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';"><span style="font-size:16px;font-weight: bold;font-family:'PingFang SC';">**【例14.8】**</span><span style="font-size:16px;font-family:'PingFang SC';">绘制线性回归图表分析“小费”</span>**（实例位置：资源包\\Code\\14\\08）**</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">同样使用tips数据集，绘制线性回归模型，关键代码如下：</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">sns.lmplot(x='total_bill',y='tip',data=tips)</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">运行程序，输出结果如图14.10所示。</span>
-
-<div style="display: block;text-align:center;">
+运行程序，输出结果如图14.10所示。
 
 <img src="images/image_508.jpg" width="773" />
 
-</div>
+<p class="book-caption">图14.10 绘制线性回归模型</p>
 
-<span style="font-size:16px;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';display: block;text-align:center;">图14.10 绘制线性回归模型</span>
+### 14.3.6 绘制箱形图—boxplot()函数
 
-</div>
+Seaborn绘制箱形图主要使用boxplot()函数，语法如下：
 
-<div class="header3">
+```text
+sns.boxplot(x=None,y=None,hue=None,data=None,order=None,hue_order=None,orient=None,color=None,palette=None,
+width=0.8,notch=False)
+```
 
-### 14.3.6 绘制箱形图—boxplot()函数
+常用参数说明： <img src="images/image_505.svg" width="14" />
 
-</div>
+ hue：分类字段。 <img src="images/image_505.svg" width="14" />
 
-<div class="part">
+ width：箱形图宽度。 <img src="images/image_505.svg" width="14" />
 
-<span style="font-size:16px;font-family:'PingFang SC';">Seaborn绘制箱形图主要使用boxplot()函数，语法如下：</span>
+ notch：中间箱体是否显示缺口，默认值为False。
 
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">sns.boxplot(x=None,y=None,hue=None,data=None,order=None,hue_order=None,orient=None,color=None,palette=None,</span>
+**【例14.9】**绘制箱形图分析“小费”异常数据**（实例位置：资源包\\Code\\14\\09）**
 
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">width=0.8,notch=False)</span>
+下面绘制箱形图，使用数据集tips演示，关键代码如下：
 
-<span style="font-size:16px;font-family:'PingFang SC';">常用参数说明： <img src="images/image_505.svg" width="14" /></span>
+```text
+sns.boxplot(x='day',y='total_bill',hue='time',data=tips)
+```
 
-<span style="font-size:16px;font-family:'PingFang SC';"> hue：分类字段。 <img src="images/image_505.svg" width="14" /></span>
+运行程序，输出结果如图14.11所示。
 
-<span style="font-size:16px;font-family:'PingFang SC';"> width：箱形图宽度。 <img src="images/image_505.svg" width="14" /></span>
-
-<span style="font-size:16px;font-family:'PingFang SC';"> notch：中间箱体是否显示缺口，默认值为False。</span>
-
-<span style="font-size:16px;font-weight: bold;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';"><span style="font-size:16px;font-weight: bold;font-family:'PingFang SC';">**【例14.9】**</span><span style="font-size:16px;font-family:'PingFang SC';">绘制箱形图分析“小费”异常数据</span>**（实例位置：资源包\\Code\\14\\09）**</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">下面绘制箱形图，使用数据集tips演示，关键代码如下：</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">sns.boxplot(x='day',y='total_bill',hue='time',data=tips)</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">运行程序，输出结果如图14.11所示。</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">从图14.11得知：数据存在异常值。箱形图实际上就是利用数据的分位数来识别数据的异常点，这一特点使得箱形图在学术界和工业界的应用都非常广泛。</span>
-
-</div>
-
-<div class="header3">
+从图14.11得知：数据存在异常值。箱形图实际上就是利用数据的分位数来识别数据的异常点，这一特点使得箱形图在学术界和工业界的应用都非常广泛。
 
 ### 说明
 
-</div>
-
-<div class="part">
-
-<span style="font-size:16px;font-family:'PingFang SC';">如果使用在线数据或离线数据，可能会出现运行效果与上述不一致的现象。</span>
-
-<div style="display: block;text-align:center;">
+如果使用在线数据或离线数据，可能会出现运行效果与上述不一致的现象。
 
 <img src="images/image_509.jpg" width="771" />
 
-</div>
+<p class="book-caption">图14.11 箱形图</p>
 
-<span style="font-size:16px;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';display: block;text-align:center;">图14.11 箱形图</span>
+### 14.3.7 绘制核密度图—kdeplot()函数
 
-</div>
+核密度是概率论中用来估计未知的密度函数，属于非参数检验方法之一。通过核密度图可以比较直观地看出数据样本本身的分布特征。
 
-<div class="header3">
+Seaborn绘制核密度图主要使用kdeplot()函数，语法如下：
 
-### 14.3.7 绘制核密度图—kdeplot()函数
+```text
+sns.kdeplot(data,shade=True)
+```
 
-</div>
+参数说明： <img src="images/image_505.svg" width="14" />
 
-<div class="part">
+ data：数据。 <img src="images/image_505.svg" width="14" />
 
-<span style="font-size:16px;font-family:'PingFang SC';">核密度是概率论中用来估计未知的密度函数，属于非参数检验方法之一。通过核密度图可以比较直观地看出数据样本本身的分布特征。</span>
+ shade：是否带阴影，默认值为True，即带阴影。
 
-<span style="font-size:16px;font-family:'PingFang SC';">Seaborn绘制核密度图主要使用kdeplot()函数，语法如下：</span>
+**【例14.10】**绘制核密度图分析鸢尾花**（实例位置：资源包\\Code\\14\\10）**
 
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">sns.kdeplot(data,shade=True)</span>
+绘制核密度图，通过Seaborn自带的数据集iris演示，关键代码如下：
 
-<span style="font-size:16px;font-family:'PingFang SC';">参数说明： <img src="images/image_505.svg" width="14" /></span>
+```text
+1  #调用seaborn自带数据集iris
+2  df = sns.load_dataset('iris')
+3  #绘制多个变量的核密度图
+4  p1=sns.kdeplot(df['sepal_width'], shade=True, color="r")
+5  p1=sns.kdeplot(df['sepal_length'], shade=True, color="b")
+```
 
-<span style="font-size:16px;font-family:'PingFang SC';"> data：数据。 <img src="images/image_505.svg" width="14" /></span>
+运行程序，输出结果如图14.12所示。
 
-<span style="font-size:16px;font-family:'PingFang SC';"> shade：是否带阴影，默认值为True，即带阴影。</span>
-
-<span style="font-size:16px;font-weight: bold;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';"><span style="font-size:16px;font-weight: bold;font-family:'PingFang SC';">**【例14.10】**</span><span style="font-size:16px;font-family:'PingFang SC';">绘制核密度图分析鸢尾花</span>**（实例位置：资源包\\Code\\14\\10）**</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">绘制核密度图，通过Seaborn自带的数据集iris演示，关键代码如下：</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">1  #<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';">调用</span>seaborn<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';">自带数据集</span>iris</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">2  df = sns.load_dataset('iris')</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'PingFang SC';"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">3  #</span>绘制多个变量的核密度图</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">4  p1=sns.kdeplot(df\['sepal_width'\], shade=True, color="r")</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">5  p1=sns.kdeplot(df\['sepal_length'\], shade=True, color="b")</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">运行程序，输出结果如图14.12所示。</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">下面再介绍一种边际核密度图，该图可以更好地体现两个变量之间的关系，如图14.13所示。</span>
-
-<div style="display: block;text-align:center;">
+下面再介绍一种边际核密度图，该图可以更好地体现两个变量之间的关系，如图14.13所示。
 
 <img src="images/image_510.jpg" width="764" />
 
-</div>
-
-<span style="font-size:16px;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';display: block;text-align:center;">▲图14.12 核密度图</span>
-
-<div style="display: block;text-align:center;">
+<p class="book-caption">▲图14.12 核密度图</p>
 
 <img src="images/image_511.jpg" width="624" />
 
-</div>
+<p class="book-caption">▲图14.13 边际核密度图</p>
 
-<span style="font-size:16px;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';display: block;text-align:center;">▲图14.13 边际核密度图</span>
+关键代码如下：
 
-<span style="font-size:16px;font-family:'PingFang SC';">关键代码如下：</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">sns.jointplot(x=df\["sepal_length"\], y=df\["sepal_width"\], kind='kde',space=0)</span>
-
-</div>
-
-<div class="header3">
+```text
+sns.jointplot(x=df["sepal_length"], y=df["sepal_width"], kind='kde',space=0)
+```
 
 ### 说明
 
-</div>
+如果使用在线数据或离线数据，可能会出现与上述运行效果不一致的现象。
 
-<div class="part">
+### 14.3.8 绘制提琴图—violinplot()函数
 
-<span style="font-size:16px;font-family:'PingFang SC';">如果使用在线数据或离线数据，可能会出现与上述运行效果不一致的现象。</span>
+提琴图结合了箱形图和核密度图的特征，用于展示数据的分布形状。粗黑线表示四分数范围，延伸的细线表示95%的置信区间，白点为中位数，如图14.14所示。提琴图弥补了箱形图的不足，可以展示数据分布是双模还是多模。提琴图主要使用violinplot()函数绘制。
 
-</div>
+**【例14.11】**绘制提琴图分析“小费”**（实例位置：资源包\\Code\\14\\11）**
 
-<div class="header3">
+绘制提琴图，通过Seaborn自带的数据集tips演示，关键代码如下：
 
-### 14.3.8 绘制提琴图—violinplot()函数
+```text
+sns.violinplot(x='total_bill',y='day',hue='time',data=tips)
+```
 
-</div>
-
-<div class="part">
-
-<span style="font-size:16px;font-family:'PingFang SC';">提琴图结合了箱形图和核密度图的特征，用于展示数据的分布形状。粗黑线表示四分数范围，延伸的细线表示95%的置信区间，白点为中位数，如图14.14所示。提琴图弥补了箱形图的不足，可以展示数据分布是双模还是多模。提琴图主要使用violinplot()函数绘制。</span>
-
-<span style="font-size:16px;font-weight: bold;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';"><span style="font-size:16px;font-weight: bold;font-family:'PingFang SC';">**【例14.11】**</span><span style="font-size:16px;font-family:'PingFang SC';">绘制提琴图分析“小费”</span>**（实例位置：资源包\\Code\\14\\11）**</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">绘制提琴图，通过Seaborn自带的数据集tips演示，关键代码如下：</span>
-
-<span style="font-size:14px;color:rgb(0, 0, 0);font-family:'Source Code Pro';">sns.violinplot(x='total_bill',y='day',hue='time',data=tips)</span>
-
-<span style="font-size:16px;font-family:'PingFang SC';">运行程序，输出结果如图14.14所示。</span>
-
-<div style="display: block;text-align:center;">
+运行程序，输出结果如图14.14所示。
 
 <img src="images/image_512.jpg" width="878" />
 
-</div>
-
-<span style="font-size:16px;color:rgb(0, 0, 0);font-family:'FZFangSong-Z02';display: block;text-align:center;">图14.14 提琴图</span>
-
-</div>
-
-<div class="header3">
+<p class="book-caption">图14.14 提琴图</p>
 
 ### 说明
 
-</div>
+如果使用在线数据或离线数据，可能会出现与上述运行效果不一致的现象。
 
-<div class="part">
+## 14.4 小结
 
-<span style="font-size:16px;font-family:'PingFang SC';">如果使用在线数据或离线数据，可能会出现与上述运行效果不一致的现象。</span>
-
-</div>
-
-<span id="Section096.xhtml"></span>
-
-<div id="Section096.xhtml_Section096.xhtml">
-
-</div>
-
-<div class="header2">
-
-## 14.4 小结
-
-</div>
-
-<div class="part">
-
-<span style="font-size:16px;font-family:'PingFang SC';">本章介绍了如何使用Seaborn模块实现数据图表的绘制，这个模块可以实现更高级的可视化效果。它偏向于统计图表，更多应用在数据挖掘和机器学习中的变量特征选取中。有这种需求的读者可以进行更深入的学习，而对于初学者了解即可。</span>
-
-</div>
-
-<span id="Section097.xhtml"></span>
-
-<div id="Section097.xhtml_Section097.xhtml">
-
-</div>
-
-<div class="header1">
+本章介绍了如何使用Seaborn模块实现数据图表的绘制，这个模块可以实现更高级的可视化效果。它偏向于统计图表，更多应用在数据挖掘和机器学习中的变量特征选取中。有这种需求的读者可以进行更深入的学习，而对于初学者了解即可。
