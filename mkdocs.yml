@@ -179,6 +179,7 @@ extra_css:
   - assets/stylesheets/navigation.css
   - assets/stylesheets/homepage.css
   - assets/stylesheets/library.css
+  - assets/stylesheets/learning.css
 
 extra_javascript:
   - assets/javascripts/mathjax.js
@@ -245,6 +246,11 @@ nav:
           
 
   - "📚 Library": library/index.md
+
+  - "💻 编程与人工智能":
+
+      - "学习中心":
+          programming/index.md
 
           
 
