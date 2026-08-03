@@ -1,21 +1,37 @@
 .back-to-main {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  margin: 0 0 1.1rem;
-  padding: 0.42rem 0.78rem;
-  border: 1px solid var(--md-default-fg-color--lightest);
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 0.2rem 0 1.35rem;
+  padding: 0.58rem 1rem;
+  border: 2px solid var(--md-primary-fg-color);
   border-radius: 999px;
-  color: var(--md-primary-fg-color);
-  font-size: 0.72rem;
-  font-weight: 700;
+  color: #fff;
+  background: var(--md-primary-fg-color);
+  box-shadow: 0 0.35rem 1rem color-mix(in srgb, var(--md-primary-fg-color) 30%, transparent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
   text-decoration: none;
-  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+  transition: filter 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
 
 .back-to-main:hover,
 .back-to-main:focus-visible {
-  border-color: var(--md-primary-fg-color);
-  background: color-mix(in srgb, var(--md-primary-fg-color) 9%, transparent);
-  transform: translateY(-1px);
+  color: #fff;
+  filter: brightness(1.08);
+  box-shadow: 0 0.5rem 1.25rem color-mix(in srgb, var(--md-primary-fg-color) 42%, transparent);
+  transform: translateY(-2px);
+}
+
+.back-to-main:focus-visible {
+  outline: 3px solid var(--md-accent-fg-color);
+  outline-offset: 3px;
+}
+
+[data-md-color-primary="amber"] .back-to-main,
+[data-md-color-primary="amber"] .back-to-main:hover,
+[data-md-color-primary="amber"] .back-to-main:focus-visible {
+  color: #1f2328;
 }
