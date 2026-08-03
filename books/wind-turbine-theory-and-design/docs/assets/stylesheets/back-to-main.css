@@ -1,0 +1,2 @@
+.back-to-main { display: inline-flex; align-items: center; gap: .35rem; margin: 0 0 1.1rem; padding: .42rem .78rem; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 999px; color: var(--md-primary-fg-color); font-size: .72rem; font-weight: 700; text-decoration: none; transition: background-color .15s ease, border-color .15s ease, transform .15s ease; }
+.back-to-main:hover, .back-to-main:focus-visible { border-color: var(--md-primary-fg-color); background: color-mix(in srgb, var(--md-primary-fg-color) 9%, transparent); transform: translateY(-1px); }
