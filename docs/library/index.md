@@ -35,10 +35,6 @@
      data-library-card
      data-category="风能基础"
      data-search="Wind Energy Handbook Second Edition 风能技术 英文 风资源 空气动力学 设计载荷 控制 风电场 海上风电">
-    <div class="library-book__cover library-book__cover--blue" aria-hidden="true">
-      <span>WE</span>
-      <small>HANDBOOK</small>
-    </div>
     <div class="library-book__body">
       <div class="library-book__meta">
         <span class="library-book__type">英文专著</span>
@@ -60,10 +56,6 @@
      data-library-card
      data-category="风能基础"
      data-search="风能技术 第二版 中文 风资源 空气动力学 风力机设计 控制 风电场">
-    <div class="library-book__cover library-book__cover--teal" aria-hidden="true">
-      <span>风能</span>
-      <small>第二版</small>
-    </div>
     <div class="library-book__body">
       <div class="library-book__meta">
         <span class="library-book__type">中文专著</span>
@@ -85,10 +77,6 @@
      data-library-card
      data-category="风机设计"
      data-search="风力发电机组理论与设计 姚兴佳 中文 风能捕获 能量传递 机电转换 总体设计 关键部件">
-    <div class="library-book__cover library-book__cover--amber" aria-hidden="true">
-      <span>风机</span>
-      <small>理论与设计</small>
-    </div>
     <div class="library-book__body">
       <div class="library-book__meta">
         <span class="library-book__type">中文专著</span>
@@ -110,10 +98,6 @@
      data-library-card
      data-category="智能运维"
      data-search="Utilizing Large Scale Foundation Models PHM 风电机组 预测 健康管理 智能运维 大模型 英文 论文">
-    <div class="library-book__cover library-book__cover--violet" aria-hidden="true">
-      <span>PHM</span>
-      <small>FOUNDATION MODELS</small>
-    </div>
     <div class="library-book__body">
       <div class="library-book__meta">
         <span class="library-book__type">英文论文</span>
