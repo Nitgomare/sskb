@@ -1,24 +1,33 @@
-# 科研新手实用培训
+---
+hide:
+  - toc
+---
 
-面向刚进入课题组的研究生，集中整理科研方法、专业资料，以及可执行的编程与人工智能学习路径。
+# 科研学习与工具导航
 
-<div class="learning-callout" markdown>
+面向刚进入课题组的研究生，按任务集中整理科研方法、专业资料，以及可执行的编程与人工智能学习路径。
 
-## :material-code-braces: 编程与人工智能学习中心
+## 选择入口
 
-Python 数据分析、机器学习与深度学习三条独立学习路径。课程、教材和练习顺序已经配好，可按周推进。
+<div class="home-portals">
 
-[选择学习路径 :material-arrow-right:](programming/index.md){ .md-button .md-button--primary }
+  <a class="home-portal home-portal--learning" href="programming/">
+    <span class="home-portal__icon" aria-hidden="true">{ }</span>
+    <span class="home-portal__content">
+      <strong>编程与人工智能</strong>
+      <small>Python 数据分析、机器学习与深度学习三条渐进式路径</small>
+    </span>
+    <span class="home-portal__arrow" aria-hidden="true">→</span>
+  </a>
 
-</div>
-
-<div class="library-hero" markdown>
-
-## :material-library-shelves: Library
-
-**从这里开始浏览课程配套书籍与专业资料。** 当前收录三项资料，每项均可进入独立图书站按章节阅读。
-
-[进入 Library :material-arrow-right:](library/index.md){ .md-button .md-button--primary }
+  <a class="home-portal home-portal--library" href="library/">
+    <span class="home-portal__icon" aria-hidden="true">▥</span>
+    <span class="home-portal__content">
+      <strong>专业资料库</strong>
+      <small>4 项课程配套书籍与论文，可进入独立图书站阅读</small>
+    </span>
+    <span class="home-portal__arrow" aria-hidden="true">→</span>
+  </a>
 
 </div>
 

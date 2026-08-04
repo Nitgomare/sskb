@@ -1,4 +1,5 @@
 ---
+title: 编程与人工智能学习中心
 hide:
   - toc
 ---
@@ -25,7 +26,7 @@ hide:
   <a class="learning-path learning-path--ml" href="../book-sites/zhou-machine-learning/" target="_top">
     <span class="learning-path__number">02 · THEORY</span>
     <h2>周志华《机器学习》</h2>
-    <p>以“西瓜书”16 章为主线；学堂在线九个视频单元只辅助前 9 章，并配有阅读范围、观看重点和输出任务。</p>
+    <p>以“西瓜书”16 章为主线；周志华课程视频只辅助前 9 章，并配有阅读范围、观看重点和输出任务。</p>
     <span class="learning-path__fit">适合：系统建立机器学习理论框架</span>
     <strong>进入配套学习站 →</strong>
   </a>
