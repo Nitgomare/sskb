@@ -16,16 +16,17 @@ hide:
 
 </div>
 
-<div class="resource-strip" markdown>
-
-**在线教材** · 《动手学深度学习》第二版中文正文与代码
-
-[打开在线教材](https://zh-v2.d2l.ai/){ target="_blank" rel="noopener" }
-
-**辅助视频** · 官方课程安排、讲授视频与公告
-
-[按需打开课程网站](https://courses.d2l.ai/zh-v2/){ target="_blank" rel="noopener" }
-
+<div class="resource-strip">
+  <div>
+    <strong>在线教材</strong>
+    <p>《动手学深度学习》第二版中文正文与代码</p>
+    <a href="https://zh-v2.d2l.ai/" target="_blank" rel="noopener">打开在线教材 ↗</a>
+  </div>
+  <div>
+    <strong>辅助视频</strong>
+    <p>官方课程安排、讲授视频与公告</p>
+    <a href="https://courses.d2l.ai/zh-v2/" target="_blank" rel="noopener">按需打开课程网站 ↗</a>
+  </div>
 </div>
 
 ## 这个网站怎么用

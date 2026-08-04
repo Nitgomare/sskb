@@ -18,20 +18,19 @@ hide:
 
 ## 教材适合解决什么
 
-<div class="principle-grid" markdown>
-
-**数组计算**
-
-用 NumPy 理解数组、矩阵、统计与向量化运算。
-
-**表格数据**
-
-用 Pandas 完成读取、清洗、连接、分组、透视与时间序列处理。
-
-**科研绘图**
-
-用 Matplotlib、Seaborn 与 Plotly 表达分布、关系和结果。
-
+<div class="principle-grid">
+  <div>
+    <strong>数组计算</strong>
+    <p>用 NumPy 理解数组、矩阵、统计与向量化运算。</p>
+  </div>
+  <div>
+    <strong>表格数据</strong>
+    <p>用 Pandas 完成读取、清洗、连接、分组、透视与时间序列处理。</p>
+  </div>
+  <div>
+    <strong>科研绘图</strong>
+    <p>用 Matplotlib、Seaborn 与 Plotly 表达分布、关系和结果。</p>
+  </div>
 </div>
 
 ## 最短学习路径

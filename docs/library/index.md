@@ -1,3 +1,9 @@
+---
+title: 专业资料库
+hide:
+  - toc
+---
+
 <div class="library-catalog" data-library>
 
 <header class="library-banner">

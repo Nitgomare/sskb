@@ -1,4 +1,99 @@
 /* 首页 Library 主入口 */
+.md-content__inner:has(.home-portals) {
+  max-width: 54rem;
+}
+
+.home-portals {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 0.8rem 0 1.8rem;
+}
+
+.home-portal {
+  display: grid;
+  min-height: 5.6rem;
+  padding: 1rem 1.05rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-left: 0.2rem solid var(--portal-color);
+  border-radius: 0.45rem;
+  color: inherit;
+  background: color-mix(in srgb, var(--md-default-bg-color) 97%, var(--portal-color) 3%);
+  box-shadow: 0 0.15rem 0.5rem rgb(0 0 0 / 4%);
+  grid-template-columns: 2rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.7rem;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.home-portal:hover,
+.home-portal:focus-visible {
+  border-color: color-mix(in srgb, var(--portal-color) 55%, transparent);
+  color: inherit;
+  box-shadow: 0 0.55rem 1rem rgb(0 0 0 / 10%);
+  transform: translateY(-0.12rem);
+}
+
+.home-portal:focus-visible {
+  outline: 0.15rem solid var(--portal-color);
+  outline-offset: 0.12rem;
+}
+
+.home-portal--learning { --portal-color: #0f7f87; }
+.home-portal--library { --portal-color: #2563b4; }
+
+.home-portal__icon {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.4rem;
+  color: #fff;
+  background: var(--portal-color);
+  font-weight: 800;
+  place-items: center;
+}
+
+.home-portal__content {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.18rem;
+}
+
+.home-portal__content strong {
+  color: var(--md-default-fg-color);
+  font-size: 0.76rem;
+}
+
+.home-portal__content small {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.58rem;
+  line-height: 1.5;
+}
+
+.home-portal__arrow {
+  color: var(--portal-color);
+  font-size: 1rem;
+  transition: transform 160ms ease;
+}
+
+.home-portal:hover .home-portal__arrow,
+.home-portal:focus-visible .home-portal__arrow {
+  transform: translateX(0.18rem);
+}
+
+@media (max-width: 44rem) {
+  .home-portals {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 76.25rem) {
+  .md-content__inner:has(.home-portals) .grid.cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 .library-hero {
   margin: 1.5rem 0 2.5rem;
   padding: 1.8rem 2rem 2rem;

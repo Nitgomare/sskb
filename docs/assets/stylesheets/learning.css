@@ -7,15 +7,16 @@
 }
 .learning-callout h2 { margin-top: 0; }
 .md-content__inner:has(.learning-hub) { max-width: 61rem; }
-.learning-hub__hero { margin: .4rem 0 2rem; padding: clamp(1.6rem,5vw,3rem); border-radius: .9rem; color: #fff; background: radial-gradient(circle at 85% 10%,#ffffff20 0 5rem,transparent 5.1rem),linear-gradient(135deg,#102a43,#0f609b 55%,#147d78); box-shadow: 0 .9rem 2rem #102a4326; }
+.learning-hub__hero { margin: .4rem 0 1.6rem; padding: clamp(1.5rem,4vw,2.5rem); border-radius: .8rem; color: #fff; background: radial-gradient(circle at 85% 10%,#ffffff20 0 5rem,transparent 5.1rem),linear-gradient(135deg,#102a43,#0f609b 55%,#147d78); box-shadow: 0 .8rem 1.7rem #102a4326; }
 .learning-hub__eyebrow { margin: 0 0 .6rem; color: #b8e3ff; font-size: .62rem; font-weight: 800; letter-spacing: .14em; }
 .learning-hub__hero h1 { margin: 0; color: #fff; font-size: clamp(1.8rem,5vw,2.7rem); }
 .learning-hub__hero > p:not(.learning-hub__eyebrow) { max-width: 39rem; color: #e7f5ff; }
 .learning-hub__meta { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1.2rem; }
 .learning-hub__meta span { padding:.25rem .6rem; border:1px solid #ffffff38; border-radius:99px; color:#eaf8ff; font-size:.62rem; }
 .learning-paths { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.8rem; margin:1rem 0 2rem; }
-.learning-path { display:flex; min-height:16rem; padding:1.15rem; border:1px solid var(--md-default-fg-color--lightest); border-top:4px solid var(--path-color); border-radius:.6rem; color:inherit; background:var(--md-default-bg-color); box-shadow:0 .2rem .7rem #0000000a; flex-direction:column; transition:transform .18s,box-shadow .18s; }
+.learning-path { display:flex; min-height:14.5rem; padding:1.05rem; border:1px solid var(--md-default-fg-color--lightest); border-top:4px solid var(--path-color); border-radius:.6rem; color:inherit; background:var(--md-default-bg-color); box-shadow:0 .2rem .7rem #0000000a; flex-direction:column; transition:transform .18s,box-shadow .18s; }
 .learning-path:hover { color:inherit; transform:translateY(-.2rem); box-shadow:0 .7rem 1.3rem #00000017; }
+.learning-path:focus-visible { color:inherit; outline:.15rem solid var(--path-color); outline-offset:.12rem; box-shadow:0 .7rem 1.3rem #00000017; }
 .learning-path--python { --path-color:#d97706; }.learning-path--ml { --path-color:#2563eb; }.learning-path--dl { --path-color:#7c3aed; }
 .learning-path__number { color:var(--path-color); font-size:.55rem; font-weight:800; letter-spacing:.08em; }
 .learning-path h2 { margin:.65rem 0 .2rem; font-size:1rem; }

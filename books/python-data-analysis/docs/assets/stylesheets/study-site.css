@@ -57,11 +57,8 @@
   margin: 1rem 0 1.8rem;
 }
 
-.principle-grid > * {
+.principle-grid > div {
   margin: 0;
-}
-
-.principle-grid > p {
   padding: 1rem;
   border: 1px solid var(--md-default-fg-color--lightest);
   border-radius: 0.55rem;
@@ -70,6 +67,13 @@
     var(--md-default-bg-color) 96%,
     var(--md-primary-fg-color) 4%
   );
+}
+
+.principle-grid p {
+  margin: 0;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.68rem;
+  line-height: 1.6;
 }
 
 .principle-grid strong {
