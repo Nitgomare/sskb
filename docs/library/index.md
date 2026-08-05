@@ -11,8 +11,8 @@ hide:
   <h1>专业资料库</h1>
   <p>按主题浏览课程配套书籍与论文，进入独立图书站后可按章节阅读。</p>
   <div class="library-banner__stats" aria-label="馆藏统计">
-    <span><strong data-library-total>4</strong> 项资料</span>
-    <span><strong data-library-category-total>3</strong> 个主题</span>
+    <span><strong data-library-total>5</strong> 项资料</span>
+    <span><strong data-library-category-total>4</strong> 个主题</span>
   </div>
 </header>
 
@@ -29,11 +29,32 @@ hide:
 </div>
 
 <div class="library-result-bar">
-  <span>共找到 <strong data-library-result-count>4</strong> 项资料</span>
+  <span>共找到 <strong data-library-result-count>5</strong> 项资料</span>
   <span class="library-result-bar__hint">点击卡片进入独立图书站</span>
 </div>
 
 <section class="library-grid" aria-label="书籍列表">
+
+  <a class="library-book"
+     href="../book-sites/zhou-machine-learning/"
+     target="_top"
+     data-library-card
+     data-category="人工智能"
+     data-search="周志华 机器学习 西瓜书 中文 教材 模型评估 线性模型 决策树 神经网络 支持向量机 聚类 强化学习">
+    <div class="library-book__body">
+      <div class="library-book__meta">
+        <span class="library-book__type">中文教材</span>
+        <span>人工智能</span>
+      </div>
+      <h2>机器学习</h2>
+      <p class="library-book__edition">周志华 著 · 全 16 章</p>
+      <p class="library-book__description">“西瓜书”完整在线正文，按章组织原书图片，并为前 9 章匹配周志华课程的正确分 P。</p>
+      <div class="library-book__tags">
+        <span>机器学习</span><span>在线全文</span><span>配套视频</span>
+      </div>
+      <span class="library-book__action">进入阅读 <span aria-hidden="true">→</span></span>
+    </div>
+  </a>
 
   <a class="library-book"
      href="../book-sites/wind-energy/"

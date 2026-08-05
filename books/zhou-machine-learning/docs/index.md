@@ -5,80 +5,52 @@ hide:
 
 <div class="study-hero study-hero--ml" markdown>
 
-<span class="study-hero__eyebrow">TEXTBOOK FIRST · VIDEO AS SUPPORT</span>
+<span class="study-hero__eyebrow">FULL TEXT · 16 CHAPTERS · 1100+ FIGURES</span>
 
 # 周志华《机器学习》
 
-以“西瓜书”16 章为唯一学习主线。《机器学习初步》课程视频只用于辅助教材第 1–9 章的直觉、推导与难点理解，不替代阅读、习题和实验。
+“西瓜书”完整 EPUB 正文已转换为 16 个按章组织的 Markdown 页面，公式、表格和插图随章保存。第 1–9 章开头嵌入周志华《机器学习初步》对应分 P，第 10–16 章保留原书主线并明确标出视频覆盖边界。
 
-[从教材第 1 章开始](modules/01-foundations.md){ .md-button .md-button--primary }
-[下载 EPUB 教材](downloads/周志华-机器学习.epub){ .md-button download }
-[下载 PDF 教材](#pdf-download){ .md-button }
+[开始阅读第 1 章](chapters/01-introduction/index.md){ .md-button .md-button--primary }
+[阅读前置内容](00-front-matter/index.md){ .md-button }
+[下载原 EPUB](downloads/周志华-机器学习.epub){ .md-button download }
 
 </div>
 
-<div class="principle-grid">
-  <div>
-    <strong>① 先读书</strong>
-    <p>按教材节次做定义、公式和假设笔记；不以“看完视频”计进度。</p>
-  </div>
-  <div>
-    <strong>② 后看辅助视频</strong>
-    <p>只在表中找到对应单元，带着阅读时的问题观看。</p>
-  </div>
-  <div>
-    <strong>③ 最后输出</strong>
-    <p>完成习题、算法复现或一页推导，才算结束本章。</p>
+<div class="book-intro-grid">
+  <img class="book-cover" src="00-front-matter/images/cover.jpeg" alt="周志华《机器学习》封面">
+  <div markdown>
+
+## 在线阅读说明
+
+- 左侧目录按原书 16 章组织，站内搜索可直接检索正文。
+- 每章图片位于该章自己的 `images` 目录，页面不依赖外部图床。
+- 视频选集共 56P，对应教材第 1–9 章；第 5、6 章已按书本主题校正顺序。
+- 原 EPUB 与 PDF 下载仍保留，在线正文以本次 EPUB 转换结果为准。
+
   </div>
 </div>
 
-## 学习资源
+## 章节目录
 
-| 资源 | 在本站中的角色 | 用途 |
-|---|---|---|
-| [《机器学习》EPUB 教材](downloads/周志华-机器学习.epub) | **主资源** | 全 16 章正文、习题、阅读材料；章节导航完全以此为准 |
-| [《机器学习》PDF 教材](#pdf-download) | **主资源** | 扫描版原书；因部署平台单文件大小限制，按原页序无损分为上、下两册 |
-| [Bilibili《机器学习初步》](https://www.bilibili.com/video/BV1gG411f7zX/) | 辅助资源 | 周志华主讲课程的 56 个分集；读完对应教材章节后按需选看 |
-| [学堂在线《机器学习初步》](https://www.xuetangx.com/course/nju0802bt/31381272) | 辅助资源 | 周志华主讲的入门课程，用于辅助教材第 1–9 章中的基础概念和经典算法 |
+- [第 1 章　绪论](chapters/01-introduction/index.md)
+- [第 2 章　模型评估与选择](chapters/02-model-evaluation-and-selection/index.md)
+- [第 3 章　线性模型](chapters/03-linear-models/index.md)
+- [第 4 章　决策树](chapters/04-decision-trees/index.md)
+- [第 5 章　神经网络](chapters/05-neural-networks/index.md)
+- [第 6 章　支持向量机](chapters/06-support-vector-machines/index.md)
+- [第 7 章　贝叶斯分类器](chapters/07-bayesian-classifiers/index.md)
+- [第 8 章　集成学习](chapters/08-ensemble-learning/index.md)
+- [第 9 章　聚类](chapters/09-clustering/index.md)
+- [第 10 章　降维与度量学习](chapters/10-dimensionality-reduction-and-metric-learning/index.md)
+- [第 11 章　特征选择与稀疏学习](chapters/11-feature-selection-and-sparse-learning/index.md)
+- [第 12 章　计算学习理论](chapters/12-computational-learning-theory/index.md)
+- [第 13 章　半监督学习](chapters/13-semi-supervised-learning/index.md)
+- [第 14 章　概率图模型](chapters/14-probabilistic-graphical-models/index.md)
+- [第 15 章　规则学习](chapters/15-rule-learning/index.md)
+- [第 16 章　强化学习](chapters/16-reinforcement-learning/index.md)
 
-## 辅助视频 · 读完对应章节再看
+## 其他内容
 
-下面的播放器用于查漏补缺。请先沿本站的教材路线完成阅读和笔记，再根据各模块标注选择对应课程单元。
-
-<div class="video-embed">
-  <iframe
-    src="https://player.bilibili.com/player.html?isOutside=true&amp;aid=404830212&amp;bvid=BV1gG411f7zX&amp;cid=1235310741&amp;p=1&amp;high_quality=1&amp;danmaku=0&amp;autoplay=0"
-    title="周志华老师亲讲《机器学习初步》"
-    loading="lazy"
-    scrolling="no"
-    frameborder="0"
-    allow="fullscreen; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-</div>
-
-<p class="video-embed__fallback">播放器无法加载时，可<a href="https://www.bilibili.com/video/BV1gG411f7zX/">前往 Bilibili 打开完整课程</a>。</p>
-
-!!! reminder "使用顺序"
-    教材正文与习题是主线；视频只在读完对应章节后，用于补充直觉、推导过程和课堂讲解。
-
-## PDF 下载 { #pdf-download }
-
-PDF 保留原扫描页，不做降质压缩。请按顺序下载阅读：
-
-[下载上册 · 第 1–221 页](downloads/周志华-机器学习-PDF-上册-第1-221页.pdf){ .md-button .md-button--primary download }
-[下载下册 · 第 222–442 页](downloads/周志华-机器学习-PDF-下册-第222-442页.pdf){ .md-button .md-button--primary download }
-
-!!! note "为什么分为两册？"
-    原 PDF 约 37.5 MiB，超过 Cloudflare Pages 的 25 MiB 单文件上限。拆分仅改变文件边界，不改变页面内容与清晰度。
-
-!!! important "覆盖边界"
-    视频公开大纲覆盖绪论、模型评估、线性模型、决策树、支持向量机、神经网络、贝叶斯分类器、集成学习与聚类。教材第 10–16 章没有在本站强行配视频，按书本作为研究生进阶自学内容。
-
-## 建议完成标准
-
-- [ ] 能不看材料写出本章的任务设定与关键假设
-- [ ] 能解释核心公式中每个量的意义
-- [ ] 能说明算法何时会失败
-- [ ] 至少完成一道推导题或一个最小代码实验
-- [ ] 留下一页可在组会前快速复习的笔记
+- [序言、前言、使用说明与主要符号表](00-front-matter/index.md)
+- [附录与后记](99-back-matter/index.md)
