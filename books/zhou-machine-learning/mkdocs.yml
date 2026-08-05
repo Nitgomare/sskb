@@ -1,5 +1,5 @@
-site_name: 周志华《机器学习》· 教材主线学习站
-site_description: 以西瓜书为主、学堂在线视频为辅的研究生机器学习学习站
+site_name: 周志华《机器学习》· 在线图书
+site_description: 周志华《机器学习》16 章完整在线正文与分 P 配套视频
 docs_dir: docs
 site_dir: ../../site/book-sites/zhou-machine-learning
 theme:
@@ -17,28 +17,37 @@ theme:
       primary: indigo
       accent: orange
       toggle: {icon: material/brightness-4, name: 切换浅色模式}
-  features: [navigation.sections, navigation.top, navigation.footer, navigation.path, content.code.copy, content.tabs.link]
+  features: [navigation.sections, navigation.top, navigation.footer, navigation.path, content.code.copy]
 nav:
-  - 学习站首页: index.md
-  - 16章教材路线: reading-map.md
-  - 教材第1–3章 · 基础: modules/01-foundations.md
-  - 教材第4–6章 · 经典方法 I: modules/02-classic-methods.md
-  - 教材第7–10章 · 经典方法 II: modules/03-more-methods.md
-  - 教材第11–16章 · 研究生进阶: modules/04-advanced.md
+  - 图书首页: index.md
+  - 前置内容: 00-front-matter/index.md
+  - 第1章 绪论: chapters/01-introduction/index.md
+  - 第2章 模型评估与选择: chapters/02-model-evaluation-and-selection/index.md
+  - 第3章 线性模型: chapters/03-linear-models/index.md
+  - 第4章 决策树: chapters/04-decision-trees/index.md
+  - 第5章 神经网络: chapters/05-neural-networks/index.md
+  - 第6章 支持向量机: chapters/06-support-vector-machines/index.md
+  - 第7章 贝叶斯分类器: chapters/07-bayesian-classifiers/index.md
+  - 第8章 集成学习: chapters/08-ensemble-learning/index.md
+  - 第9章 聚类: chapters/09-clustering/index.md
+  - 第10章 降维与度量学习: chapters/10-dimensionality-reduction-and-metric-learning/index.md
+  - 第11章 特征选择与稀疏学习: chapters/11-feature-selection-and-sparse-learning/index.md
+  - 第12章 计算学习理论: chapters/12-computational-learning-theory/index.md
+  - 第13章 半监督学习: chapters/13-semi-supervised-learning/index.md
+  - 第14章 概率图模型: chapters/14-probabilistic-graphical-models/index.md
+  - 第15章 规则学习: chapters/15-rule-learning/index.md
+  - 第16章 强化学习: chapters/16-reinforcement-learning/index.md
+  - 附录与后记: 99-back-matter/index.md
 markdown_extensions:
   - admonition
   - attr_list
   - md_in_html
   - tables
+  - footnotes
   - pymdownx.details
   - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - toc:
       permalink: true
       toc_depth: 2-3

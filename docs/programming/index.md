@@ -26,9 +26,9 @@ hide:
   <a class="learning-path learning-path--ml" href="../book-sites/zhou-machine-learning/" target="_top">
     <span class="learning-path__number">02 · THEORY</span>
     <h2>周志华《机器学习》</h2>
-    <p>以“西瓜书”16 章为主线；周志华课程视频只辅助前 9 章，并配有阅读范围、观看重点和输出任务。</p>
+    <p>“西瓜书”16 章完整在线正文，原书图片随章保存；第 1–9 章开头嵌入周志华课程的对应分 P。</p>
     <span class="learning-path__fit">适合：系统建立机器学习理论框架</span>
-    <strong>进入配套学习站 →</strong>
+    <strong>进入在线图书 →</strong>
   </a>
   <a class="learning-path learning-path--dl" href="../book-sites/deep-learning/" target="_top">
     <span class="learning-path__number">03 · PRACTICE</span>
